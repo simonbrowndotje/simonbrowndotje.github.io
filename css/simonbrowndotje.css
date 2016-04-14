@@ -29,9 +29,8 @@ h1 {
 }
 footer {
     text-align: center;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    color: gray;
+    padding: 32px;
+    color: white;
     background: gray;
 }
 footer a {
@@ -82,4 +81,8 @@ h3 {
 }
 .eventType {
   color: gray;
+}
+.googleAnalytics {
+  font-size: 11px;
+  color: #dddddd;
 }
