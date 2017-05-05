@@ -31,7 +31,7 @@ footer {
     text-align: center;
     padding: 32px;
     color: white;
-    background: gray;
+    background: #02172C;
 }
 footer a {
     color: white;
@@ -83,7 +83,7 @@ h3 {
   color: gray;
 }
 .googleAnalytics {
-  font-size: 11px;
+  font-size: 9px;
   color: #dddddd;
 }
 .tagline {
