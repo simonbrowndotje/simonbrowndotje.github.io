@@ -16,11 +16,21 @@ li {
   background-image:url('../img/header.jpg');
   background-size:cover;
   background-position: center;
-  color: white;
-  height: 200px;
+  color: #000000;
+  height: 400px;
 }
 .header .label {
   font-size: 13px;
+}
+.navigation {
+    background: #444444;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 15px;
+    text-align: center;
+}
+.navigation a {
+    color: #ffffff;
 }
 h1 {
   font-size: 60px;
@@ -31,7 +41,7 @@ footer {
     text-align: center;
     padding: 32px;
     color: white;
-    background: #02172C;
+    background: #aaaaaa;
 }
 footer a {
     color: white;
@@ -54,7 +64,7 @@ footer a {
     background: #ffffff;
 }
 .sectionShaded {
-    background: #dddddd;
+    background: #eeeeee;
 }
 .row {
     padding-bottom: 20px;
@@ -74,7 +84,14 @@ h3 {
 }
 .country {
     font-size: 11px;
-    margin-right: 10px;
+}
+.country img {
+    width: 30px;
+    margin: 10px;
+}
+.flag {
+    width: 30px;
+    margin: 5px;
 }
 h3 {
     margin-bottom: 0;
