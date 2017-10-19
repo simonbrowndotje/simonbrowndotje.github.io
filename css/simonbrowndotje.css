@@ -108,3 +108,14 @@ h3 {
   font-weight: bold;
   padding-bottom: 20px;
 }
+.nav-tabs {
+    font-size: 11px;
+}
+.nav-tabs>li>a, .nav-tabs>li>a:focus, .nav-tabs>li>a:hover {
+    background: #dddddd;
+    color: #999999;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    background: #1168bd;
+    color: #ffffff;
+}

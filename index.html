@@ -9,6 +9,7 @@
     <link href="./css/simonbrowndotje.css" rel="stylesheet" media="screen">
     <link href="./css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
     <script src="./js/jquery-1.8.2.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css' />
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -157,9 +158,9 @@
         </div>
     </div>
 
-    <a name="writing"></a>
     <div class="section sectionShaded">
         <div class="container">
+            <a name="writing"></a>
             <h2>Writing</h2>
             <p>
                 I've authored and co-authored a number of books about software architecture, Java, etc.
@@ -202,11 +203,11 @@
         </div>
     </div>
 
-    <a name="speaking"></a>
     <div class="section">
         <div class="container">
             <div class="row">
                 <div class="span10">
+                    <a name="speaking"></a>
                     <h2>Speaking</h2>
                     <p>
                         I deliver sessions about software architecture at conferences, user groups and organisations around the world; including opening keynotes, closing keynotes, conference talks, panel sessions, training courses and workshops.
@@ -248,12 +249,93 @@
                 <!-- Please call pinit.js only once per page -->
                 <script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script>
             </div>
+
+            <a name="bio"></a>
+            <h3>Bio and abstracts</h3>
+            <p>
+                If you're an event organiser, here's my current bio and talk/workshop abstracts.
+                I've done many different talks related to software architecture in recent years, so please get in touch if you'd
+                like something slightly different from what you see here.
+            </p>
+
+            <ul class="nav nav-tabs">
+                <li role="presentation" class="active"><a href="#speakingBio" data-toggle="tab">Bio</a></li>
+                <li role="presentation"><a href="#speakingTalk1" data-toggle="tab">Talk: Software architecture for developers</a></li>
+                <li role="presentation"><a href="#speakingTalk2" data-toggle="tab">Talk: Maps, travel guides and source code</a></li>
+                <li role="presentation"><a href="#speakingTalk3" data-toggle="tab">Talk: Modular monoliths</a></li>
+                <li role="presentation"><a href="#speakingWorkshop1" data-toggle="tab">Workshop: Visualising software architecture with the C4 model</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div id="speakingBio" class="tab-pane fade in active">
+                    <h4>Simon Brown</h4>
+                    <h5>Independent Consultant</h5>
+                    <p>
+                        Simon is an independent consultant specialising in software architecture, and the author of
+                        <a href="https://leanpub.com/b/software-architecture">"Software Architecture for Developers"</a>
+                        (a developer-friendly guide to software architecture, technical leadership and the balance with agility).
+                        He is also the creator of the <a href="https://c4model.com">C4 software architecture model</a>,
+                        which is a simple approach to creating maps of your code. Simon is a regular speaker at international
+                        software development conferences and travels the world to help organisations visualise and document their software architecture.
+                    </p>
+
+                    <p>
+                        <img src="./img/simonbrown.jpg" alt="Simon Brown" class="thumbnail" />
+                    </p>
+                </div>
+                <div id="speakingTalk1" class="tab-pane fade in">
+                    <h4>Software architecture for developers</h4>
+                    <h5>Duration: 45-60 minutes</h5>
+                    <p>
+                        The software development industry has made huge leaps in recent years; with agile, lean, software craftsmanship, evolutionary design and microservices being just a few of the buzzwords we throw around. Despite this, software development teams are often more chaotic than they are self-organising, with the resulting code being more of a mess than was perhaps anticipated. Successful software projects aren't just about good code though, and sometimes you need to step away from the IDE for a few moments to see the bigger picture. This session is about that bigger picture and is aimed at software developers who want to learn more about software architecture, technical leadership and the balance with agility. This talk will debunk some of the common myths as we look at five things every developer should know about software architecture; a guide to software architecture on modern software projects that's pragmatic rather than academic and lightweight rather than "enterprisey".
+                    </p>
+                </div>
+                <div id="speakingTalk2" class="tab-pane fade in">
+                    <h4>Maps, travel guides and source code</h4>
+                    <h5>Duration: 45-90 minutes</h5>
+                    <p>
+                        "We value working software over comprehensive documentation" is what the manifesto for agile software development says, with the typical misinterpretation of these few words being "don't write documentation". Of course, that's not what the manifesto says and "no documentation" certainly wasn't the intent. It seems that many software teams have lost the ability to communicate what it is they are building and it's no surprise that these same teams often seem to lack technical leadership, direction and consistency. Join us for a journey, as we navigate through maps, travel guides and source code to visualise, document and explore our software.
+                    </p>
+                </div>
+                <div id="speakingTalk3" class="tab-pane fade in">
+                    <h4>Modular monoliths</h4>
+                    <h5>Duration: 45-60 minutes</h5>
+                    <p>
+                        If you want evidence that the software development industry is susceptible to fashion, just go and take a look at all of the hype around microservices. It's everywhere! For some people microservices is "the next big thing", whereas for others it's simply a lightweight evolution of the big service-oriented architectures that we saw 10 years ago "done right". Microservices is by no means a silver bullet though, and the design thinking required to create a good microservices architecture is the same as that needed to create a well structured monolith. And this begs the question that if you can’t build a well-structured monolith, what makes you think microservices is the answer?
+                    </p>
+                </div>
+                <div id="speakingWorkshop1" class="tab-pane fade in">
+                    <h4>Visualising software architecture with the C4 model</h4>
+                    <h5>Duration: 1-day</h5>
+                    <p>
+                        It's very likely that the majority of the software architecture diagrams you've seen are a confused mess of boxes and lines. Following the publication of the Manifesto for Agile Software Development in 2001, teams have abandoned UML, discarded the concept of modelling and instead place a heavy reliance on conversations centered around incoherent whiteboard diagrams or shallow "Marketecture" diagrams created with Visio. Moving fast and being agile requires good communication, yet software development teams struggle with this fundamental skill. A good set of software architecture diagrams are priceless for aligning a team around a shared vision and for getting new-joiners productive fast.
+                    </p>
+                    <p>
+                        This hands-on workshop explores the visual communication of software architecture and is based upon a decade of my experiences working with software development teams large and small across the globe. We'll look at what is commonplace today, the importance of creating a shared vocabulary, diagram notation, and the value of creating a lightweight model to describe your software system. The workshop is based upon the "C4 model", which I created as a way to help software development teams describe and communicate software architecture, both during up-front design sessions and when retrospectively documenting an existing codebase. It's a way to create maps of your code, at various levels of detail. Static structure, runtime and deployment diagrams are all covered, so you'll be able to tell different stories to different audiences. We'll wrap up the day by looking at the tooling landscape and diagram automation to keep your diagrams in sync with your source code.                
+                    </p>
+
+                    <h5>Learning outcomes</h5>
+                    <p>
+                        This 1-day workshop will give you some pragmatic, practical and lightweight techniques that you can apply to your work the very next day. You'll learn why most software architecture diagrams are meaningless, how to critique them, how to fix them and how to use the C4 model to create a simple yet powerful set of developer-friendly diagrams to describe software architecture.
+                    </p>
+                    
+                    <h5>Target audience</h5>
+                    <p>
+                        Software developers and architects; all levels of experience.
+                    </p>
+                    
+                    <h5>Pre-requisites</h5>
+                    <p>
+                        Some experience building software; no laptops needed.
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 
-    <a name="training"></a>
     <div class="section sectionShaded">
         <div class="container">
+            <a name="training"></a>
             <h2>Training</h2>
             <p>
                 I run software architecture training courses at organisations across the globe, the content of which is based upon my <a href="https://leanpub.com/b/software-architecture">Software Architecture for Developers</a> books.
@@ -379,9 +461,9 @@
         </div>
     </div>
 
-    <a name="interviews"></a>
     <div class="section">
         <div class="container">
+            <a name="interviews"></a>
             <h2>Interviews and podcasts</h2>
             <p>
                 I've been interviewed for a number of magazines and podcasts; including:
@@ -406,10 +488,10 @@
                 <li><a href="http://www.se-radio.net/2015/06/episode-228-software-architecture-sketches-with-simon-brown/" target="_blank">Software Engineering Radio</a></li>
                 <li><a href="https://blog.fogcreek.com/lightweight-software-architecture-interview-with-simon-brown/" target="_blank">Fog Creek</a></li>
                 <li><a href="http://samnewman.io/blog/2015/12/01/magpie-talkshow-episode-6-simon-brown/" target="_blank">Magpie Talkshow</a></li>
-                <li><a href="https://theagilerevolution.com/2015/07/20/episode-91-coding-the-architecture-with-simon-brown/" target="_blank">The Agile Revolution</li>
-                <li><a href="https://www.youtube.com/watch?v=0fSRadBepYk" target="_blank">O'Reilly</li>
-                <li><a href="https://www.voxxed.com/2015/01/simon-brown-agile-architecture/" target="_blank">Voxxed</li>
-                <li><a href="http://www.dqmagazine.com/news/return-of-the-architect/" target="_blank">DQ magazine</li>
+                <li><a href="https://theagilerevolution.com/2015/07/20/episode-91-coding-the-architecture-with-simon-brown/" target="_blank">The Agile Revolution</a></li>
+                <li><a href="https://www.youtube.com/watch?v=0fSRadBepYk" target="_blank">O'Reilly</a></li>
+                <li><a href="https://www.voxxed.com/2015/01/simon-brown-agile-architecture/" target="_blank">Voxxed</a></li>
+                <li><a href="http://www.dqmagazine.com/news/return-of-the-architect/" target="_blank">DQ magazine</a></li>
             </ul>
         </div>
     </div>
