@@ -119,3 +119,10 @@ h3 {
     background: #1168bd;
     color: #ffffff;
 }
+.nav-tabs {
+    margin-bottom: 0px;
+}
+.tab-content {
+    border: solid 1px #dddddd;
+    padding: 10px;
+}
