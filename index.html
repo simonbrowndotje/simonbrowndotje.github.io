@@ -69,21 +69,31 @@
             </p>
 
             <div class="row">
-                <div class="span6 centered">
+                <div class="span4 centered">
                     <div class="embed-responsive embed-responsive-16by9 centered">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/YmdTyFRBGxE" frameborder="0" allowfullscreen class="img-polaroid"></iframe>
+                        <iframe src="https://www.youtube.com/embed/z1xLDzx7hgw" frameborder="0" allowfullscreen class="img-polaroid"></iframe>
                         <p style="font-size: 11px">
-                            Software Architecture for Developers
+                            <b>Software Architecture for Developers</b>
+                            <br />
+                            YOW! Conference - Brisbane, Australia - December 2017
+                        </p>
+                    </div>
+                </div>
+                <div class="span4 centered">
+                    <div class="embed-responsive embed-responsive-16by9 centered">
+                        <iframe src="https://www.youtube.com/embed/YmdTyFRBGxE" frameborder="0" allowfullscreen class="img-polaroid"></iframe>
+                        <p style="font-size: 11px">
+                            <b>Software Architecture for Developers</b>
                             <br />
                             O'Reilly Software Architecture Conference - London, England - October 2017
                         </p>
                     </div>
                 </div>
-                <div class="span6 centered">
+                <div class="span4 centered">
                     <div class="embed-responsive embed-responsive-16by9 centered">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/m76bR16EhrU" frameborder="0" allowfullscreen class="img-polaroid"></iframe>
+                        <iframe src="https://www.youtube.com/embed/m76bR16EhrU" frameborder="0" allowfullscreen class="img-polaroid"></iframe>
                         <p style="font-size: 11px">
-                            Visualise, document and explore your software architecture
+                            <b>Visualise, document and explore your software architecture</b>
                             <br />
                             OpenSlava - Bratislava, Slovakia - October 2017
                         </p>
@@ -98,7 +108,7 @@
                     <div class="embed-responsive embed-responsive-16by9 centered">
                         <iframe src="https://player.vimeo.com/video/213746948" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen class="img-polaroid"></iframe>
                         <p style="font-size: 11px">
-                            Visualise, document and explore your software architecture
+                            <b>Visualise, document and explore your software architecture</b>
                             <br />
                             NDC London - London, England - January 2017
                         </p>
@@ -108,7 +118,7 @@
                     <div class="embed-responsive embed-responsive-16by9 centered">
                         <iframe src="https://www.youtube.com/embed/aPtT2GNu8vM" frameborder="0" allowfullscreen class="img-polaroid"></iframe>
                         <p style="font-size: 11px">
-                            The art of visualising software architecture
+                            <b>The art of visualising software architecture</b>
                             <br />
                             Voxxed Days Athens - Athens, Greece - May 2017
                         </p>
@@ -118,7 +128,7 @@
                     <div class="embed-responsive embed-responsive-16by9 centered">
                         <iframe src="https://www.youtube.com/embed/t7q1SwDUIdA" frameborder="0" allowfullscreen class="img-polaroid"></iframe>
                         <p style="font-size: 11px">
-                            Agile and architecture; finally friends
+                            <b>Agile and architecture; finally friends</b>
                             <br />
                             ING Loves IT - Bucharest, Romania - April 2017
                         </p>
@@ -132,6 +142,7 @@
                 In 2013, I won the IEEE Software sponsored <i>SATURN 2013 "Architecture in Practice" Presentation Award</i> for my presentation about the conflict between agile and architecture. I've spoken at events and/or have clients in the following countries. 
             </p>
 
+            <!--
             <p class="centered">
                 <span class="country"><img src="./img/flags/australia.png" alt="Australia" title="Australia" /></span>
                 <span class="country"><img src="./img/flags/austria.png" alt="Australia" title="Austria" /></span>
@@ -169,6 +180,89 @@
                 <span class="country"><img src="./img/flags/united-kingdom.png" alt="United Kingdom" title="United Kingdom" /></span>
                 <span class="country"><img src="./img/flags/united-states-of-america.png" alt="United States" title="United States" /></span>
             </p>
+            -->
+
+            <p class="centered">
+                <div id="map"></div>
+            </p>
+            <script>
+                var map;
+        
+                var coordinates = [
+                { lat: -25.274398, lng: 133.77513599999997 }, // Australia
+                { lat: 47.516231, lng: 14.550072 }, // Austria
+                { lat: 50.503887, lng: 4.4699359999999615 }, // Belgium
+                { lat: 56.130366, lng: -106.34677099999999 }, // Canada
+                { lat: 35.86166, lng: 104.19539699999996 }, // China
+                { lat: 49.81749199999999, lng: 15.472962000000052 }, // Czech Republic
+                { lat: 56.26392, lng: 9.50178500000004 }, // Denmark
+                { lat: 61.92410999999999, lng: 25.748151099999973 }, // Finland
+                { lat: 46.227638, lng: 2.213749000000007 }, // France
+                { lat: 51.165691, lng: 10.451526000000058 }, // Germany
+                { lat: 39.074208, lng: 21.824311999999964 }, // Greece
+                { lat: 49.465691, lng: -2.5852780000000166 }, // Guernsey
+                { lat: 22.396428, lng: 114.10949700000003 }, // Hong Kong
+                { lat: 47.162494, lng: 19.503304100000037 }, // Hungary
+                { lat: 64.963051, lng: -19.020835000000034 }, // Iceland
+                { lat: 53.1423672, lng: -7.692053600000008 }, // Ireland
+                { lat: 41.87194, lng: 12.567379999999957 }, // Italy
+                { lat: 49.214439, lng: -2.1312500000000227 }, // Jersey
+                { lat: 56.879635, lng: 24.60318899999993 }, // Latvia
+                { lat: 55.169438, lng: 23.88127499999996 }, // Lithuania
+                { lat: 41.608635, lng: 21.745274999999992 }, // Republic of Macedonia
+                { lat: 52.132633, lng: 5.2912659999999505 }, // The Netherlands
+                { lat: 60.47202399999999, lng: 8.46894599999996 }, // Norway
+                { lat: 51.919438, lng: 19.14513599999998 }, // Poland
+                { lat: 39.39987199999999, lng: -8.224454000000037 }, // Portugal
+                { lat: 45.943161, lng: 24.966760000000022 }, // Romania
+                { lat: 48.669026, lng: 19.69902400000001 }, // Slovakia
+                { lat: 35.907757, lng: 127.76692200000002 }, // South Korea
+                { lat: 40.46366700000001, lng: -3.7492200000000366 }, // Spain
+                { lat: 60.12816100000001, lng: 18.643501000000015 }, // Sweden
+                { lat: 46.818188, lng: 8.227511999999933 }, // Switzerland
+                { lat: 48.379433, lng: 31.16557990000001 }, // Ukraine
+                { lat: 23.424076, lng: 53.84781799999996 }, // United Arab Emirates
+                { lat: 52.3555177, lng: -1.1743197000000691 }, // England
+                { lat: 56.49067119999999, lng: -4.2026458000000275 }, // Scotland
+                { lat: 52.1306607, lng: -3.783711700000026 }, // Wales
+                { lat: 54.7877149, lng: -6.49231450000002 }, // Northern Ireland
+                { lat: 37.09024, lng: -95.71289100000001 }, // United States
+                ];
+        
+                function initMap() {
+                    map = new google.maps.Map(document.getElementById('map'), {
+                        center: {lat: 17.570692, lng: -3.9961660000000165},
+                        zoom: 2
+                    });
+        
+                    addMarkers();
+                }
+        
+                function geocode(place) {
+                    var geocoder = new google.maps.Geocoder();
+                    geocoder.geocode( { 'address': place}, function(results, status) {
+                        if (status == google.maps.GeocoderStatus.OK) {
+                            console.log("{ lat: " + results[0].geometry.location.lat() + ", lng: " + results[0].geometry.location.lng() + " }, // " + place);
+                        } else {
+                            console.log("Geocode was not successful for the following reason: " + status);
+                        }
+                    });            
+                }
+        
+                function addMarkers() {
+                    var geocoder = new google.maps.Geocoder();
+                    coordinates.forEach(function(coordinate) {
+                        var marker = new google.maps.Marker({
+                            map: map,
+                            position: coordinate
+                        });
+                    })
+                }
+            </script>
+            <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBmIl2_M2l6v756Nc1oZigSx0cW8B3KhI&callback=initMap">
+            </script>
+        
         </div>
     </div>
 
@@ -181,26 +275,22 @@
             </p>
 
             <div class="row">
-                <div class="span3">
-                </div>
-                <div class="span3">
+                <div class="span3 centered">
                     <a href="https://leanpub.com/software-architecture-for-developers"><img src="./img/sa4d-1.png" alt="Software Architecture for Developers: Volume 1" class="img-polaroid" /></a>
                 </div>
-                <div class="span3">
+                <div class="span3 centered">
                     <a href="https://leanpub.com/visualising-software-architecture"><img src="./img/sa4d-2.png" alt="Software Architecture for Developers: Volume 2" class="img-polaroid" /></a>
                 </div>
-                <div class="span3">
+                <div class="span6 centered">
+                    <a href="http://www.ituring.com.cn/book/1444"><img src="./img/sa4d-chinese.jpg" alt="Software Architecture for Developers" class="img-polaroid" /></a>
+                    <a href="http://www.apress.com/java/jsp/9781590595138"><img src="./img/projsp2.png" alt="Pro JSP 2" class="img-polaroid" /></a>
+                    <a href="http://www.apress.com/java/jsp/9781590592250"><img src="./img/projsp3e.png" alt="Pro JSP 3rd Edition" class="img-polaroid" /></a>
+                    <br />
+                    <a href="http://www.amazon.com/Professional-JSP-Libraries-Simon-Brown/dp/1861006217"><img src="./img/projsptags.png" alt="Professional JSP Tag Libraries" class="img-polaroid" /></a>
+                    <a href="http://www.amazon.com/Professional-Java-Servlets-Andrew-Harbourne-Thomas/dp/186100561X"><img src="./img/projavaservlets.png" alt="Professional Java Servlets 2.3" class="img-polaroid" /></a>
+                    <a href="http://www.amazon.com/Professional-JSP-2nd-Simon-Brown/dp/1861004958/"><img src="./img/projsp2e.png" alt="Professional JSP 2nd Edition" class="img-polaroid" /></a>
                 </div>
             </div>
-
-            <p align="center">
-                <a href="http://www.ituring.com.cn/book/1444"><img src="./img/sa4d-chinese.jpg" alt="Software Architecture for Developers" class="img-polaroid" /></a>
-                <a href="http://www.apress.com/java/jsp/9781590595138"><img src="./img/projsp2.png" alt="Pro JSP 2" class="img-polaroid" /></a>
-                <a href="http://www.apress.com/java/jsp/9781590592250"><img src="./img/projsp3e.png" alt="Pro JSP 3rd Edition" class="img-polaroid" /></a>
-                <a href="http://www.amazon.com/Professional-JSP-Libraries-Simon-Brown/dp/1861006217"><img src="./img/projsptags.png" alt="Professional JSP Tag Libraries" class="img-polaroid" /></a>
-                <a href="http://www.amazon.com/Professional-Java-Servlets-Andrew-Harbourne-Thomas/dp/186100561X"><img src="./img/projavaservlets.png" alt="Professional Java Servlets 2.3" class="img-polaroid" /></a>
-                <a href="http://www.amazon.com/Professional-JSP-2nd-Simon-Brown/dp/1861004958/"><img src="./img/projsp2e.png" alt="Professional JSP 2nd Edition" class="img-polaroid" /></a>
-            </p>
 
             <p>
                 I've also contributed some content to the following books, as well as being a technical reviewer on others.
@@ -240,27 +330,6 @@
                         <li><img src="./img/flags/united-states-of-america.png" alt="United States" class="flag" /> <a href="http://devnexus.com/presentations/1892">DevNexus 2018</a> in Atlanta, United States <span class="eventType">[February; talk and workshop]</span>.</li>
                         <li><img src="./img/flags/netherlands.png" alt="The Netherlands" class="flag" /> <a href="https://www.jdriven.com/event/workshop/simon-brown-training/">"Software Architecture for Developers" at JDriven</a> in Nieuwegein, The Netherlands <span class="eventType">[February; workshop]</span>.</li>
                         <li><img src="./img/flags/norway.png" alt=Norway class="flag" /> <a href="https://www.meetup.com/Oslo-Software-Architecture/events/246604331/">Oslo Software Architecture (OSWA)</a> in Oslo, Norway <span class="eventType">[January; interactive session]</span>.</li>
-                    </ul>
-
-                    <h3>2017</h3>
-                    <ul style="list-style: none;">
-                        <li><img src="./img/flags/australia.png" alt="Australia" class="flag" /> <a href="http://sydney.yowconference.com.au/profile/?id=simon-brown">YOW! Conference</a> in Sydney, Australia <span class="eventType">[December; talk and workshop]</span>.</li>
-                        <li><img src="./img/flags/australia.png" alt="Australia" class="flag" /> <a href="http://brisbane.yowconference.com.au/profile/?id=simon-brown">YOW! Conference</a> in Brisbane, Australia <span class="eventType">[December; talk]</span>.</li>
-                        <li><img src="./img/flags/australia.png" alt="Australia" class="flag" /> <a href="http://melbourne.yowconference.com.au/profile/?id=simon-brown">YOW! Conference</a> in Melbourne, Australia <span class="eventType">[December; talk]</span>.</li>
-                        <li><img src="./img/flags/republic-of-macedonia.png" alt="Macedonia" class="flag" /> <a href="http://jug.mk/event/tech-session/2017-11-09-software-architecture-for-developers.html">JUGMK meetup</a> in Skopje, Macedonia <span class="eventType">[November; talk]</span>.</li>
-                        <li><img src="./img/flags/england.png" alt="England" class="flag" /> <a href="https://conferences.oreilly.com/software-architecture/sa-eu/public/schedule/speaker/193482">O'Reilly Software Architecture Conference</a> in London, England <span class="eventType">[October; talk]</span>.</li>
-                        <li><img src="./img/flags/slovakia.png" alt=Slovakia class="flag" /> <a href="http://www.openslava.sk/2017/">OpenSlava</a> in Bratislava, Slovakia <span class="eventType">[October; talk]</span>.</li>
-                        <li><img src="./img/flags/netherlands.png" alt="The Netherlands" class="flag" /> <a href="http://cloudbusting.softwarecircus.io">Software Circus 2017</a> in Amsterdam, The Netherlands <span class="eventType">[September; talk]</span>.</li>
-                        <li><img src="./img/flags/germany.png" alt=“Germany” class="flag" /> <a href="http://www.developer-week.de/Blog/3-Keynotes-fuer-dwx17">Developer Week 2017</a> in Nuremberg, Germany <span class="eventType">[June; keynote and workshop]</span>.</li>
-                        <li><img src="./img/flags/norway.png" alt=“Norway” class="flag" /> <a href="http://ndcoslo.com/speaker/simon-brown">NDC Oslo 2017</a> in Oslo, Norway <span class="eventType">[June; talk]</span>.</li>
-                        <li><img src="./img/flags/sweden.png" alt=“Sweden” class="flag" /> <a href="http://www.devsum.se/speaker/simon-brown/">DevSum 2017</a> in Stockholm, Sweden <span class="eventType">[June; talk]</span>.</li>
-                        <li><img src="./img/flags/greece.png" alt="Greece" class="flag" /> <a href="https://voxxeddays.com/athens/speakers/simon-brown/">Voxxed Days Athens</a> in Athens, Greece <span class="eventType">[May; keynote and workshop]</span>.</li>
-                        <li><img src="./img/flags/england.png" alt="England" class="flag" /> <a href="http://sddconf.com/speakers/#sp4548">SDD Conf 2017</a> in London, England <span class="eventType">[May; talks and workshop]</span>.</li>
-                        <li><img src="./img/flags/romania.png" alt=“Romania” class="flag" /> <a href="https://www.ing-events.com/inglovesit/">ING Loves IT</a> in Bucharest, Romania <span class="eventType">[April; keynote]</span>.</li>
-                        <li><img src="./img/flags/norway.png" alt=“Norway” class="flag" /> <a href="https://www.boosterconf.no/talks/912">Booster Conference</a> in Bergen, Norway <span class="eventType">[March; workshop]</span>.</li>
-                        <li><img src="./img/flags/denmark.png" alt="Denmark" class="flag" /> <a href="https://gotoacademysummit.com/products/the-art-of-visualising-software-architecture">GOTO Academy</a> in Copenhagen, Denmark <span class="eventType">[March; workshop]</span>.</li>
-                        <li><img src="./img/flags/germany.png" alt="Germany" class="flag" /> <a href="http://www.oop-konferenz.de/oop2017/konferenz/konferenzprogramm/sprecher-detail/simon-brown.html">OOP 2017</a> in Munich, Germany <span class="eventType">[February; talk]</span>.</li>
-                        <li><img src="./img/flags/england.png" alt="England" class="flag" /> <a href="http://ndc-london.com/talk/visualise-document-and-explore-your-software-architecture/">NDC London 2017</a> in London, England <span class="eventType">[January; talk]</span>.</li>
                     </ul>
                 </div>
                 <div class="span2 centered">
@@ -413,10 +482,6 @@
     </div>
 
     <footer>
-        <p class="googleAnalytics">
-            This website uses Google Analytics to track website usage, inbound links, etc. You can find more information about this at <a href="http://www.google.com/policies/privacy/partners/">How Google uses data when you use our partners' sites or apps</a>.
-            You can choose to <a href="https://tools.google.com/dlpage/gaoptout">opt-out</a> of Google Analytics.
-        </p>
         <p>
             <a href="https://twitter.com/simonbrown">@simonbrown</a>
             |
@@ -426,25 +491,6 @@
     </footer>
 
     <script src="./js/bootstrap.min.js"></script>
-
-    <!-- start of Google Analytics -->
-    <script type="text/javascript">
-
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-21665207-1']);
-        _gaq.push(['_trackPageview']);
-
-        (function() {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
-
-    </script>
-    <!-- end of Google Analytics -->
 
 </body>
 </html>

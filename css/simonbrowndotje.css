@@ -127,3 +127,7 @@ h3 {
     border: solid 1px #dddddd;
     padding: 10px;
 }
+#map {
+    width: 100%;
+    height: 500px;
+}
