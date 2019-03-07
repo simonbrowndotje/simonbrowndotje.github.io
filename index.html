@@ -136,12 +136,98 @@
                 </div>
             </div>
 
-            <h3>Award-winning speaker</h3>
-            <p>
-                I speak at software development conferences, meetups and organisations around the world; delivering <b>keynotes, presentations, training courses and workshops</b>.
-                In 2013, I won the IEEE Software sponsored <a href="http://www.codingthearchitecture.com/2013/05/17/saturn_2013.html" target="_blank">SATURN 2013 "Architecture in Practice" Presentation Award</a> for my presentation about the conflict between agile and architecture. I've spoken at events and/or have clients in over 30 countries. 
-            </p>
-        </div>
+            <div class="row">
+                <div class="span4">
+
+                    <h3>Award-winning speaker</h3>
+                    <p>
+                        I speak at software development conferences, meetups and organisations around the world; delivering <b>keynotes, presentations, training courses and workshops</b>.
+                        In 2013, I won the IEEE Software sponsored <a href="http://www.codingthearchitecture.com/2013/05/17/saturn_2013.html" target="_blank">SATURN 2013 "Architecture in Practice" Presentation Award</a> for my presentation about the conflict between agile and architecture. I've spoken at events and/or have clients in over 30 countries. 
+                    </p>
+                </div>
+                <div class="span8 centered">
+                    <div id="map"></div>
+                    <script>
+                        var map;
+                
+                        var coordinates = [
+                        { lat: -25.274398, lng: 133.77513599999997 }, // Australia
+                        { lat: 47.516231, lng: 14.550072 }, // Austria
+                        { lat: 50.503887, lng: 4.4699359999999615 }, // Belgium
+                        { lat: 56.130366, lng: -106.34677099999999 }, // Canada
+                        { lat: 35.86166, lng: 104.19539699999996 }, // China
+                        { lat: 49.81749199999999, lng: 15.472962000000052 }, // Czech Republic
+                        { lat: 56.26392, lng: 9.50178500000004 }, // Denmark
+                        { lat: 61.92410999999999, lng: 25.748151099999973 }, // Finland
+                        { lat: 46.227638, lng: 2.213749000000007 }, // France
+                        { lat: 51.165691, lng: 10.451526000000058 }, // Germany
+                        { lat: 39.074208, lng: 21.824311999999964 }, // Greece
+                        { lat: 49.465691, lng: -2.5852780000000166 }, // Guernsey
+                        { lat: 22.396428, lng: 114.10949700000003 }, // Hong Kong
+                        { lat: 47.162494, lng: 19.503304100000037 }, // Hungary
+                        { lat: 64.963051, lng: -19.020835000000034 }, // Iceland
+                        { lat: 20.593684, lng: 78.96288000000004 }, // India
+                        { lat: 53.1423672, lng: -7.692053600000008 }, // Ireland
+                        { lat: 41.87194, lng: 12.567379999999957 }, // Italy
+                        { lat: 49.214439, lng: -2.1312500000000227 }, // Jersey
+                        { lat: 56.879635, lng: 24.60318899999993 }, // Latvia
+                        { lat: 55.169438, lng: 23.88127499999996 }, // Lithuania
+                        { lat: 41.608635, lng: 21.745274999999992 }, // Republic of Macedonia
+                        { lat: 39.6952629, lng: 3.0175712000000203 }, // Mallorca
+                        { lat: 52.132633, lng: 5.2912659999999505 }, // The Netherlands
+                        { lat: 60.47202399999999, lng: 8.46894599999996 }, // Norway
+                        { lat: 51.919438, lng: 19.14513599999998 }, // Poland
+                        { lat: 39.39987199999999, lng: -8.224454000000037 }, // Portugal
+                        { lat: 45.943161, lng: 24.966760000000022 }, // Romania
+                        { lat: 48.669026, lng: 19.69902400000001 }, // Slovakia
+                        { lat: 35.907757, lng: 127.76692200000002 }, // South Korea
+                        { lat: 40.46366700000001, lng: -3.7492200000000366 }, // Spain
+                        { lat: 60.12816100000001, lng: 18.643501000000015 }, // Sweden
+                        { lat: 46.818188, lng: 8.227511999999933 }, // Switzerland
+                        { lat: 48.379433, lng: 31.16557990000001 }, // Ukraine
+                        { lat: 23.424076, lng: 53.84781799999996 }, // United Arab Emirates
+                        { lat: 52.3555177, lng: -1.1743197000000691 }, // England
+                        { lat: 56.49067119999999, lng: -4.2026458000000275 }, // Scotland
+                        { lat: 52.1306607, lng: -3.783711700000026 }, // Wales
+                        { lat: 54.7877149, lng: -6.49231450000002 }, // Northern Ireland
+                        { lat: 37.09024, lng: -95.71289100000001 }, // United States
+                        ];
+                
+                        function initMap() {
+                            map = new google.maps.Map(document.getElementById('map'), {
+                                center: {lat: 17.570692, lng: -3.9961660000000165},
+                                zoom: 2
+                            });
+                
+                            addMarkers();
+                        }
+                
+                        function geocode(place) {
+                            var geocoder = new google.maps.Geocoder();
+                            geocoder.geocode( { 'address': place}, function(results, status) {
+                                if (status == google.maps.GeocoderStatus.OK) {
+                                    console.log("{ lat: " + results[0].geometry.location.lat() + ", lng: " + results[0].geometry.location.lng() + " }, // " + place);
+                                } else {
+                                    console.log("Geocode was not successful for the following reason: " + status);
+                                }
+                            });            
+                        }
+                
+                        function addMarkers() {
+                            var geocoder = new google.maps.Geocoder();
+                            coordinates.forEach(function(coordinate) {
+                                var marker = new google.maps.Marker({
+                                    map: map,
+                                    position: coordinate
+                                });
+                            })
+                        }
+                    </script>
+                    <script async defer
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBmIl2_M2l6v756Nc1oZigSx0cW8B3KhI&callback=initMap">
+                    </script>        
+                </div>
+            </div>
 
         </div>
     </div>
