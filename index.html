@@ -4,43 +4,35 @@
     <title>Simon Brown</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link rel="shortcut icon" href="img/simonbrown.jpg">
-    <link href="./css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="./css/simonbrowndotje.css" rel="stylesheet" media="screen">
-    <link href="./css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
-    <script src="./js/jquery-1.8.2.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css' />
 
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-    <script src="./js/html5.js"></script>
-    <![endif]-->
+    <link rel="shortcut icon" href="img/simonbrown.jpg">
+
+    <link href="./css/bootstrap-3.3.2.min.css" rel="stylesheet" media="screen">
+    <link href="./css/bootstrap-theme-3.3.2.min.css" rel="stylesheet" media="screen">
+
+    <script src="./js/jquery-2.0.3.min.js"></script>
+    <script src="./js/bootstrap-3.3.2.min.js"></script>
+
+    <link href="./css/simonbrowndotje.css" rel="stylesheet" media="screen">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css' />
 </head>
 
 <body>
-    
-    <style>
-        body {
-            padding: 0;
-        }
-        .container {
-            padding-left: 10px;
-            padding-right: 10px;
-        }
-    </style>
+    <div id="content">
+        <div id="header">
+            <h1>Simon Brown</h1>
+            <h2>Independent consultant specialising in software architecture</h2>
+        </div>
 
-    <div class="header">
-    </div>
-
-    <div class="navigation">
+    <div id="navigation">
         <a href="#speaking">Speaking</a>
         &nbsp;
         <a href="#training">Training</a>
         &nbsp;
         <a href="#writing">Writing</a>
         &nbsp;
-        <a href="mailto:simon.brown@codingthearchitecture.com" target="_blank"><img src="./img/icon-email.png" alt="E-mail" width="40px" /></a>
+        <a href="mailto:simon@architectis.je" target="_blank"><img src="./img/icon-email.png" alt="E-mail" width="40px" /></a>
         &nbsp;
         <a href="https://twitter.com/simonbrown" target="_blank"><img src="./img/icon-twitter.png" alt="Twitter" width="40px" /></a>
         &nbsp;
@@ -59,7 +51,7 @@
 
     <div class="section">
         <div class="container">
-            <h2>Simon Brown</h2>
+            <h2>About</h2>
             <p>
                 I'm an <b>independent consultant specialising in software architecture</b> and 
                 the author of <a href="https://leanpub.com/b/software-architecture">Software Architecture for Developers</a>; a
@@ -70,7 +62,7 @@
         </div>
     </div>
 
-    <div class="section sectionShaded">
+    <div class="section">
         <div class="container">
             <a name="speaking"></a>
             <h2>Speaking</h2>
@@ -82,405 +74,394 @@
             </p>
 
             <div class="row">
-                <div class="span4 centered">
-                    <div class="embed-responsive embed-responsive-16by9 centered">
-                        <iframe src="https://www.youtube.com/embed/5OjqD-ow8GE" frameborder="0" allowfullscreen class="img-polaroid"></iframe>
-                        <p style="font-size: 11px">
-                            <b>Modular monoliths</b>
-                            <br />
-                            GOTO Berlin 2018 - Berlin, Germany - November 2018
-                        </p>
-                    </div>
+                <div class="col-xs-4 centered">
+                    <p class="embed-responsive embed-responsive-16by9 centered img-thumbnail">
+                        <iframe src="https://www.youtube.com/embed/5OjqD-ow8GE" frameborder="0" allowfullscreen></iframe>
+                    </p>
+                    <p style="font-size: 11px">
+                        <b>Modular monoliths</b>
+                        <br />
+                        GOTO Berlin 2018 - Berlin, Germany - November 2018
+                    </p>
                 </div>
-                <div class="span4 centered">
-                    <div class="embed-responsive embed-responsive-16by9 centered">
-                        <iframe src="https://www.youtube.com/embed/9imyW_WAYP4" frameborder="0" allowfullscreen class="img-polaroid"></iframe>
-                        <p style="font-size: 11px">
-                            <b>The model-code gap</b>
-                            <br />
-                            SCLConf 2018 - London, England - October 2018
-                        </p>
-                    </div>
+                <div class="col-xs-4 centered">
+                    <p class="embed-responsive embed-responsive-16by9 centered img-thumbnail">
+                        <iframe src="https://www.youtube.com/embed/9imyW_WAYP4" frameborder="0" allowfullscreen></iframe>
+                    </p>
+                    <p style="font-size: 11px">
+                        <b>The model-code gap</b>
+                        <br />
+                        SCLConf 2018 - London, England - October 2018
+                    </p>
                 </div>
-                <div class="span4 centered">
-                    <div class="embed-responsive embed-responsive-16by9 centered">
-                        <iframe src="https://www.youtube.com/embed/z1xLDzx7hgw" frameborder="0" allowfullscreen class="img-polaroid"></iframe>
-                        <p style="font-size: 11px">
-                            <b>Software Architecture for Developers</b>
-                            <br />
-                            YOW! Conference - Brisbane, Australia - December 2017
-                        </p>
-                    </div>
+                <div class="col-xs-4 centered">
+                    <p class="embed-responsive embed-responsive-16by9 centered img-thumbnail">
+                        <iframe src="https://www.youtube.com/embed/z1xLDzx7hgw" frameborder="0" allowfullscreen></iframe>
+                    </p>
+                    <p style="font-size: 11px">
+                        <b>Software Architecture for Developers</b>
+                        <br />
+                        YOW! Conference - Brisbane, Australia - December 2017
+                    </p>
                 </div>
             </div>
 
             <br />
 
             <div class="row">
-                <div class="span4 centered">
-                    <div class="embed-responsive embed-responsive-16by9 centered">
-                        <iframe src="https://www.youtube.com/embed/m76bR16EhrU" frameborder="0" allowfullscreen class="img-polaroid"></iframe>
-                        <p style="font-size: 11px">
-                            <b>Visualise, document and explore your software architecture</b>
-                            <br />
-                            OpenSlava - Bratislava, Slovakia - October 2017
-                        </p>
-                    </div>
+                <div class="col-xs-4 centered">
+                    <p class="embed-responsive embed-responsive-16by9 centered img-thumbnail">
+                        <iframe src="https://www.youtube.com/embed/m76bR16EhrU" frameborder="0" allowfullscreen></iframe>
+                    </p>
+                    <p style="font-size: 11px">
+                        <b>Visualise, document and explore your software architecture</b>
+                        <br />
+                        OpenSlava - Bratislava, Slovakia - October 2017
+                    </p>
                 </div>
-                <div class="span4 centered">
-                    <div class="embed-responsive embed-responsive-16by9 centered">
-                        <iframe src="https://www.youtube.com/embed/aPtT2GNu8vM" frameborder="0" allowfullscreen class="img-polaroid"></iframe>
-                        <p style="font-size: 11px">
-                            <b>The art of visualising software architecture</b>
-                            <br />
-                            Voxxed Days Athens - Athens, Greece - May 2017
-                        </p>
-                    </div>
+                <div class="col-xs-4 centered">
+                    <p class="embed-responsive embed-responsive-16by9 centered img-thumbnail">
+                        <iframe src="https://www.youtube.com/embed/aPtT2GNu8vM" frameborder="0" allowfullscreen></iframe>
+                    </p>
+                    <p style="font-size: 11px">
+                        <b>The art of visualising software architecture</b>
+                        <br />
+                        Voxxed Days Athens - Athens, Greece - May 2017
+                    </p>
                 </div>
-                <div class="span4 centered">
-                    <div class="embed-responsive embed-responsive-16by9 centered">
-                        <iframe src="https://www.youtube.com/embed/t7q1SwDUIdA" frameborder="0" allowfullscreen class="img-polaroid"></iframe>
-                        <p style="font-size: 11px">
-                            <b>Agile and architecture; finally friends</b>
-                            <br />
-                            ING Loves IT - Bucharest, Romania - April 2017
-                        </p>
-                    </div>
+                <div class="col-xs-4 centered">
+                    <p class="embed-responsive embed-responsive-16by9 centered img-thumbnail">
+                        <iframe src="https://www.youtube.com/embed/t7q1SwDUIdA" frameborder="0" allowfullscreen></iframe>
+                    </p>
+                    <p style="font-size: 11px">
+                        <b>Agile and architecture; finally friends</b>
+                        <br />
+                        ING Loves IT - Bucharest, Romania - April 2017
+                    </p>
                 </div>
             </div>
 
             <p>
-                I've spoken at events and/or have clients in over 30 countries. 
+                Although most of the work that I do is on-site with organisations (I have clients in over 30 countries), I do speak at a number of public events. Here is my recent and future public speaking schedule:
             </p>
 
             <div class="row">
-                <div class="span8 centered">
-                    <div id="map"></div>
-                    <script>
-                        var map;
-                
-                        var coordinates = [
-                        { lat: -25.274398, lng: 133.77513599999997 }, // Australia
-                        { lat: 47.516231, lng: 14.550072 }, // Austria
-                        { lat: 50.503887, lng: 4.4699359999999615 }, // Belgium
-                        { lat: 56.130366, lng: -106.34677099999999 }, // Canada
-                        { lat: 35.86166, lng: 104.19539699999996 }, // China
-                        { lat: 49.81749199999999, lng: 15.472962000000052 }, // Czech Republic
-                        { lat: 56.26392, lng: 9.50178500000004 }, // Denmark
-                        { lat: 61.92410999999999, lng: 25.748151099999973 }, // Finland
-                        { lat: 46.227638, lng: 2.213749000000007 }, // France
-                        { lat: 51.165691, lng: 10.451526000000058 }, // Germany
-                        { lat: 39.074208, lng: 21.824311999999964 }, // Greece
-                        { lat: 49.465691, lng: -2.5852780000000166 }, // Guernsey
-                        { lat: 22.396428, lng: 114.10949700000003 }, // Hong Kong
-                        { lat: 47.162494, lng: 19.503304100000037 }, // Hungary
-                        { lat: 64.963051, lng: -19.020835000000034 }, // Iceland
-                        { lat: 20.593684, lng: 78.96288000000004 }, // India
-                        { lat: 53.1423672, lng: -7.692053600000008 }, // Ireland
-                        { lat: 41.87194, lng: 12.567379999999957 }, // Italy
-                        { lat: 49.214439, lng: -2.1312500000000227 }, // Jersey
-                        { lat: 56.879635, lng: 24.60318899999993 }, // Latvia
-                        { lat: 55.169438, lng: 23.88127499999996 }, // Lithuania
-                        { lat: 41.608635, lng: 21.745274999999992 }, // Republic of Macedonia
-                        { lat: 39.6952629, lng: 3.0175712000000203 }, // Mallorca
-                        { lat: 52.132633, lng: 5.2912659999999505 }, // The Netherlands
-                        { lat: 60.47202399999999, lng: 8.46894599999996 }, // Norway
-                        { lat: 51.919438, lng: 19.14513599999998 }, // Poland
-                        { lat: 39.39987199999999, lng: -8.224454000000037 }, // Portugal
-                        { lat: 45.943161, lng: 24.966760000000022 }, // Romania
-                        { lat: 48.669026, lng: 19.69902400000001 }, // Slovakia
-                        { lat: 35.907757, lng: 127.76692200000002 }, // South Korea
-                        { lat: 40.46366700000001, lng: -3.7492200000000366 }, // Spain
-                        { lat: 60.12816100000001, lng: 18.643501000000015 }, // Sweden
-                        { lat: 46.818188, lng: 8.227511999999933 }, // Switzerland
-                        { lat: 48.379433, lng: 31.16557990000001 }, // Ukraine
-                        { lat: 23.424076, lng: 53.84781799999996 }, // United Arab Emirates
-                        { lat: 52.3555177, lng: -1.1743197000000691 }, // England
-                        { lat: 56.49067119999999, lng: -4.2026458000000275 }, // Scotland
-                        { lat: 52.1306607, lng: -3.783711700000026 }, // Wales
-                        { lat: 54.7877149, lng: -6.49231450000002 }, // Northern Ireland
-                        { lat: 37.09024, lng: -95.71289100000001 }, // United States
-                        ];
-                
-                        function initMap() {
-                            map = new google.maps.Map(document.getElementById('map'), {
-                                center: {lat: 17.570692, lng: -3.9961660000000165},
-                                zoom: 1.75
-                            });
-                
-                            addMarkers();
-                        }
-                
-                        function geocode(place) {
-                            var geocoder = new google.maps.Geocoder();
-                            geocoder.geocode( { 'address': place}, function(results, status) {
-                                if (status == google.maps.GeocoderStatus.OK) {
-                                    console.log("{ lat: " + results[0].geometry.location.lat() + ", lng: " + results[0].geometry.location.lng() + " }, // " + place);
-                                } else {
-                                    console.log("Geocode was not successful for the following reason: " + status);
-                                }
-                            });            
-                        }
-                
-                        function addMarkers() {
-                            var geocoder = new google.maps.Geocoder();
-                            coordinates.forEach(function(coordinate) {
-                                var marker = new google.maps.Marker({
-                                    map: map,
-                                    position: coordinate
-                                });
-                            })
-                        }
-                    </script>
-                    <script async defer
-                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBmIl2_M2l6v756Nc1oZigSx0cW8B3KhI&callback=initMap">
-                    </script>        
+                <div class="col-sm-8">
+                <h3>2019</h3>
+                    <ul id="publicSpeakingSchedule" style="list-style: none;">
+                        <li><img src="./img/flags/australia.png" alt="Australia" class="flag" /> <a href="https://yowconference.com/talks/simon-brown">YOW! Melbourne 2019</a> in Melbourne, Australia <span class="eventType">[December 10th-13th; workshop and talk]</span>.</li>
+                        <li><img src="./img/flags/australia.png" alt="Australia" class="flag" /> <a href="https://yowconference.com/talks/simon-brown">YOW! Brisbane 2019</a> in Brisbane, Australia <span class="eventType">[December 9th-10th; talk]</span>.</li>
+                        <li><img src="./img/flags/australia.png" alt="Australia" class="flag" /> <a href="https://yowconference.com/talks/simon-brown">YOW! Sydney 2019</a> in Sydney, Australia <span class="eventType">[December 3rd-6th; workshop and talk]</span>.</li>
+                        <li><img src="./img/flags/england.png" alt="England" class="flag" /> <a href="https://sc-london.com">Software Craftsmanship Conference London 2019</a> in London, England <span class="eventType">[October 4th; talk]</span>.</li>
+                        <li><img src="./img/safari.png" alt="O'Reilly Safari" class="flag" /> Visualizing software architecture with the C4 Model online via Safari <span class="eventType">[August 2nd; training]</span>.</li>
+                        <li><img src="./img/safari.png" alt="O'Reilly Safari" class="flag" /> Software architecture for developers online via Safari <span class="eventType">[August 1st; training]</span>.</li>
+                        <li><img src="./img/flags/england.png" alt="England" class="flag" /> <a href="https://agileonthebeach.com">Agile on the Beach 2019</a> in Falmouth, England <span class="eventType">[July 11th and 12th; talk]</span>.</li>
+                        <li><img src="./img/flags/england.png" alt="England" class="flag" /> <a href="https://www.spaconference.org/spa2019/simon-brown.html">BCS SPA Conference 2019</a> in London, England <span class="eventType">[June 24th or 25th; keynote]</span>.</li>
+                        <li><img src="./img/flags/netherlands.png" alt="The Netherlands" class="flag" /> <a href="https://www.meetup.com/Trifork-Tech-Update-Amsterdam/events/261038453/">Trifork Tech Update Amsterdam</a> in Amsterdam, The Netherlands <span class="eventType">[May 16th; talk]</span>.</li>
+                        <li><img src="./img/flags/netherlands.png" alt="The Netherlands" class="flag" /> <a href="https://www.gotoacademy.nl/collections/simon-brown-software-architecture-for-developers">"Software Architecture for Developers" at GOTO Academy</a> in Amsterdam, The Netherlands <span class="eventType">[May 16th/17th; workshop]</span>.</li>
+                        <li><img src="./img/flags/sweden.png" alt="Sweden" class="flag" /> <a href="https://www.code-conf.com/2019/technical-agile-conference/">Technical Agile Conference</a> in Gothenburg, Sweden <span class="eventType">[May 13/14th; workshop and talk]</span>.</li>
+                        <li><img src="./img/flags/england.png" alt="England" class="flag" /> <a href="http://bitrconf.org/">Build IT Right 2019</a> in Newcastle, England <span class="eventType">[April 4th; keynote]</span>.</li>
+                        <li><img src="./img/safari.png" alt="O'Reilly Safari" class="flag" /> <a href="https://www.safaribooksonline.com/live-training/courses/visualizing-software-architecture-with-the-c4-model/0636920241676/">Visualizing software architecture with the C4 Model</a> online via Safari <span class="eventType">[April 2nd; training]</span>.</li>
+                        <li><img src="./img/safari.png" alt="O'Reilly Safari" class="flag" /> <a href="https://www.safaribooksonline.com/live-training/courses/software-architecture-for-developers/0636920241621/">Software architecture for developers</a> online via Safari <span class="eventType">[April 1st; training]</span>.</li>
+                        <li><img src="./img/flags/netherlands.png" alt="The Netherlands" class="flag" /> <a href="https://www.meetup.com/bol-com-techlab/events/258294229/">Meetup organised by Sourcelabs and bol.com</a> in Utrecht, The Netherlands <span class="eventType">[March 26th; talk]</span>.</li>
+                        <li><img src="./img/safari.png" alt="O'Reilly Safari" class="flag" /> <a href="https://www.safaribooksonline.com/live-training/courses/visualizing-software-architecture-with-the-c4-model/0636920225171/">Visualizing software architecture with the C4 Model</a> online via Safari <span class="eventType">[January 18th; training]</span>.</li>
+                        <li><img src="./img/flags/spain.png" alt=Spain" class="flag" /> <a href="https://www.cpiicyl.org/index.php/content/curso-c4-model-maps-your-code-con-simon-brown">Colegio Profesional de Ingenieros en Informática de Castilla y León</a> in Valladolid, Spain <span class="eventType">[January 12th; workshop]</span>.</li>
+                        <li><img src="./img/safari.png" alt="O'Reilly Safari" class="flag" /> <a href="https://www.safaribooksonline.com/live-training/courses/software-architecture-for-developers/0636920224518/">Software architecture for developers</a> online via Safari <span class="eventType">[January 7th; training]</span>.</li>
+                    </ul>
                 </div>
-            </div>    
-
-            <p>
-                Here is my recent and future public speaking schedule.
-            </p>
-
-            <h3>2019</h3>
-            <ul style="list-style: none;">
-                <li><img src="./img/flags/australia.png" alt="Australia" class="flag" /> <a href="https://yowconference.com/talks/simon-brown">YOW! Melbourne 2019</a> in Melbourne, Australia <span class="eventType">[December 10th-13th; workshop and talk]</span>.</li>
-                <li><img src="./img/flags/australia.png" alt="Australia" class="flag" /> <a href="https://yowconference.com/talks/simon-brown">YOW! Brisbane 2019</a> in Brisbane, Australia <span class="eventType">[December 9th-10th; talk]</span>.</li>
-                <li><img src="./img/flags/australia.png" alt="Australia" class="flag" /> <a href="https://yowconference.com/talks/simon-brown">YOW! Sydney 2019</a> in Sydney, Australia <span class="eventType">[December 3rd-6th; workshop and talk]</span>.</li>
-                <li><img src="./img/flags/england.png" alt="England" class="flag" /> <a href="https://sc-london.com">Software Craftsmanship Conference London 2019</a> in London, England <span class="eventType">[October 4th; talk]</span>.</li>
-                <li><img src="./img/safari.png" alt="O'Reilly Safari" class="flag" /> Visualizing software architecture with the C4 Model online via Safari <span class="eventType">[August 2nd; training]</span>.</li>
-                <li><img src="./img/safari.png" alt="O'Reilly Safari" class="flag" /> Software architecture for developers online via Safari <span class="eventType">[August 1st; training]</span>.</li>
-                <li><img src="./img/flags/england.png" alt="England" class="flag" /> <a href="https://agileonthebeach.com">Agile on the Beach 2019</a> in Falmouth, England <span class="eventType">[July 11th and 12th; talk]</span>.</li>
-                <li><img src="./img/flags/england.png" alt="England" class="flag" /> <a href="https://www.spaconference.org/spa2019/simon-brown.html">BCS SPA Conference 2019</a> in London, England <span class="eventType">[June 24th or 25th; keynote]</span>.</li>
-                <li><img src="./img/flags/netherlands.png" alt="The Netherlands" class="flag" /> <a href="https://www.meetup.com/Trifork-Tech-Update-Amsterdam/events/261038453/">Trifork Tech Update Amsterdam</a> in Amsterdam, The Netherlands <span class="eventType">[May 16th; talk]</span>.</li>
-                <li><img src="./img/flags/netherlands.png" alt="The Netherlands" class="flag" /> <a href="https://www.gotoacademy.nl/collections/simon-brown-software-architecture-for-developers">"Software Architecture for Developers" at GOTO Academy</a> in Amsterdam, The Netherlands <span class="eventType">[May 16th/17th; workshop]</span>.</li>
-                <li><img src="./img/flags/sweden.png" alt="Sweden" class="flag" /> <a href="https://www.code-conf.com/2019/technical-agile-conference/">Technical Agile Conference</a> in Gothenburg, Sweden <span class="eventType">[May 13/14th; workshop and talk]</span>.</li>
-                <li><img src="./img/flags/england.png" alt="England" class="flag" /> <a href="http://bitrconf.org/">Build IT Right 2019</a> in Newcastle, England <span class="eventType">[April 4th; keynote]</span>.</li>
-                <li><img src="./img/safari.png" alt="O'Reilly Safari" class="flag" /> <a href="https://www.safaribooksonline.com/live-training/courses/visualizing-software-architecture-with-the-c4-model/0636920241676/">Visualizing software architecture with the C4 Model</a> online via Safari <span class="eventType">[April 2nd; training]</span>.</li>
-                <li><img src="./img/safari.png" alt="O'Reilly Safari" class="flag" /> <a href="https://www.safaribooksonline.com/live-training/courses/software-architecture-for-developers/0636920241621/">Software architecture for developers</a> online via Safari <span class="eventType">[April 1st; training]</span>.</li>
-                <li><img src="./img/flags/netherlands.png" alt="The Netherlands" class="flag" /> <a href="https://www.meetup.com/bol-com-techlab/events/258294229/">Meetup organised by Sourcelabs and bol.com</a> in Utrecht, The Netherlands <span class="eventType">[March 26th; talk]</span>.</li>
-                <li><img src="./img/safari.png" alt="O'Reilly Safari" class="flag" /> <a href="https://www.safaribooksonline.com/live-training/courses/visualizing-software-architecture-with-the-c4-model/0636920225171/">Visualizing software architecture with the C4 Model</a> online via Safari <span class="eventType">[January 18th; training]</span>.</li>
-                <li><img src="./img/flags/spain.png" alt=Spain" class="flag" /> <a href="https://www.cpiicyl.org/index.php/content/curso-c4-model-maps-your-code-con-simon-brown">Colegio Profesional de Ingenieros en Informática de Castilla y León</a> in Valladolid, Spain <span class="eventType">[January 12th; workshop]</span>.</li>
-                <li><img src="./img/safari.png" alt="O'Reilly Safari" class="flag" /> <a href="https://www.safaribooksonline.com/live-training/courses/software-architecture-for-developers/0636920224518/">Software architecture for developers</a> online via Safari <span class="eventType">[January 7th; training]</span>.</li>
-            </ul>
-
-            <h3>2018</h3>
-            <ul style="list-style: none;">
-                <li><img src="./img/flags/netherlands.png" alt="The Netherlands" class="flag" /> <a href="https://www.gotoacademy.nl/collections/simon-brown-software-architecture-for-developers">"Software Architecture for Developers" at GOTO Academy</a> in Amsterdam, The Netherlands <span class="eventType">[December 12th/13th; workshop]</span>.</li>
-                <li><img src="./img/flags/germany.png" alt=“Germany" class="flag" /> <a href="https://gotober.com/2018/speakers/516">GOTO Berlin 2018</a> in Berlin, Germany <span class="eventType">[October 30th & November 1st; workshop and talk]</span>.</li>
-                <li><img src="./img/flags/england.png" alt="England" class="flag" /> <a href="http://sc-london.com/">Software Craftsmanship Conference London 2018</a> in London, England <span class="eventType">[October 4th; talk]</span>.</li>
-                <li><img src="./img/flags/netherlands.png" alt="The Netherlands" class="flag" /> <a href="http://nextbuild.nl">NextBuild 2018</a> in Eindhoven, The Netherlands <span class="eventType">[September 29th; keynote]</span>.</li>
-                <li><img src="./img/flags/netherlands.png" alt="The Netherlands" class="flag" /> <a href="https://www.jdriven.com/event/workshop/simon-brown-training/">"Software Architecture for Developers" at JDriven</a> in Nieuwegein, The Netherlands <span class="eventType">[September 27th/28th; workshop]</span>.</li>
-                <li><img src="./img/flags/romania.png" alt="Romania" class="flag" /> <a href="https://twitter.com/Centric_Ro/status/1034468483801726977">"Software Architecture for Developers" at Centric Romania</a> in Iasi, Romania <span class="eventType">[September 18th; talk]</span>.</li>
-                <li><img src="./img/safari.png" alt="O'Reilly Safari" class="flag" /> <a href="https://www.safaribooksonline.com/live-training/courses/visualizing-software-architecture-with-the-c4-model/0636920205463/">Visualizing software architecture with the C4 Model</a> online via Safari <span class="eventType">[August 27th; training]</span>.</li>
-                <li><img src="./img/safari.png" alt="O'Reilly Safari" class="flag" /> <a href="https://www.safaribooksonline.com/live-training/courses/software-architecture-for-developers/0636920205258/">Software architecture for developers</a> online via Safari <span class="eventType">[August 24th; training]</span>.</li>
-                <li><img src="./img/safari.png" alt="O'Reilly Safari" class="flag" /> <a href="https://www.safaribooksonline.com/live-training/courses/visualizing-software-architecture-with-the-c4-model/0636920193784/">Visualizing software architecture with the C4 Model</a> online via Safari <span class="eventType">[July 16th; training]</span>.</li>
-                <li><img src="./img/safari.png" alt="O'Reilly Safari" class="flag" /> <a href="https://www.safaribooksonline.com/live-training/courses/software-architecture-for-developers/0636920193739/">Software architecture for developers</a> online via Safari <span class="eventType">[July 13th; training]</span>.</li>
-                <li><img src="./img/safari.png" alt="O'Reilly Safari" class="flag" /> <a href="https://www.safaribooksonline.com/live-training/courses/visualizing-software-architecture-with-the-c4-model/0636920188223/">Visualizing software architecture with the C4 Model</a> online via Safari <span class="eventType">[June 29th; training]</span>.</li>
-                <li><img src="./img/safari.png" alt="O'Reilly Safari" class="flag" /> <a href="https://www.safaribooksonline.com/live-training/courses/software-architecture-for-developers/0636920188810/">Software architecture for developers</a> online via Safari <span class="eventType">[June 15th; training]</span>.</li>
-                <li><img src="./img/flags/belgium.png" alt=Belgium” class="flag" /> <a href="https://www.sourced-bvba.be">"Software Architecture for Developers" at Sourced</a> in Beveren, Belgium <span class="eventType">[June 12th/12th; talk and workshop]</span>.</li>
-                <li><img src="./img/flags/sweden.png" alt=“Sweden” class="flag" /> <a href="http://www.devsum.se/speaker/simon-brown/">DevSum 2018</a> in Stockholm, Sweden <span class="eventType">[May 30th/31st; talk and workshop]</span>.</li>
-                <li><img src="./img/flags/england.png" alt="England" class="flag" /> <a href="https://sddconf.com/speakers/#sp4740">SDD Conf 2018</a> in London, England <span class="eventType">[May 16th/17th; talks]</span>.</li>
-                <li><img src="./img/safari.png" alt="O'Reilly Safari" class="flag" /> <a href="https://www.safaribooksonline.com/live-training/courses/visualizing-software-architecture-with-the-c4-model/0636920174127/">Visualizing software architecture with the C4 Model</a> online via Safari <span class="eventType">[May 11th; training]</span>.</li>
-                <li><img src="./img/flags/balearic-islands.png" alt=“Balearic Islands" class="flag" /> <a href="https://www.buildstuff.es/">Build Stuff Spain 2018</a> in Mallorca <span class="eventType">[May 6th; talk]</span>.</li>
-                <li><img src="./img/safari.png" alt="O'Reilly Safari" class="flag" /> <a href="https://www.safaribooksonline.com/live-training/courses/software-architecture-for-developers/0636920174288/">Software architecture for developers</a> online via Safari <span class="eventType">[May 4th; training]</span>.</li>
-                <li><img src="./img/vjug.jpg" alt="Virtual JUG" class="flag" /> <a href="https://www.meetup.com/virtualJUG/events/248185308/">Virtual JUG</a> online <span class="eventType">[March 6th; talk]</span>.</li>
-                <li><img src="./img/flags/united-states-of-america.png" alt="United States" class="flag" /> <a href="http://devnexus.com/presentations/1892">DevNexus 2018</a> in Atlanta, United States <span class="eventType">[February 21st-32rd; talk and workshop]</span>.</li>
-                <li><img src="./img/flags/netherlands.png" alt="The Netherlands" class="flag" /> <a href="https://www.jdriven.com/event/workshop/simon-brown-training/">"Software Architecture for Developers" at JDriven</a> in Nieuwegein, The Netherlands <span class="eventType">[February 6th/7th; workshop]</span>.</li>
-                <li><img src="./img/flags/norway.png" alt=Norway class="flag" /> <a href="https://www.meetup.com/Oslo-Software-Architecture/events/246604331/">Oslo Software Architecture (OSWA)</a> in Oslo, Norway <span class="eventType">[January 17th; interactive session]</span>.</li>
-            </ul>
-
-            <div class="centered hidden-phone">
-                <a data-pin-do="embedBoard" href="http://www.pinterest.com/simonbrowndotje/work/" data-pin-scale-width="115" data-pin-scale-height="600" data-pin-board-width="900">Follow Simon Brown's board Work on Pinterest.</a>
-                <!-- Please call pinit.js only once per page -->
-                <script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script>
-            </div>
-
-            <a name="eventOrganisers"></a>
-            <h3>Information for event organisers</h3>
-            <p>
-                Here's some information about my speaking fee, along with my current bio and talk abstracts.
-                I've done <a href="http://www.codingthearchitecture.com/presentations/">many different talks related to software architecture in recent years</a>, so please get in touch if you'd
-                like something slightly different from what you see here.
-            </p>
-
-            <ul class="nav nav-tabs">
-                <li role="presentation" class="active"><a href="#speakingFee" data-toggle="tab">Speaking fee</a></li>
-                <li role="presentation"><a href="#bio" data-toggle="tab">Bio</a></li>
-                <li role="presentation"><a href="#talk1" data-toggle="tab">Talk: Software architecture for developers</a></li>
-                <li role="presentation"><a href="#talk2" data-toggle="tab">Talk: Visualising software architecture with the C4 model</a></li>
-                <li role="presentation"><a href="#talk3" data-toggle="tab">Talk: The lost art of software design</a></li>
-                <li role="presentation"><a href="#talk4" data-toggle="tab">Talk: Modular monoliths</a></li>
-            </ul>
-
-            <div class="tab-content">
-                <div id="speakingFee" class="tab-pane fade in active">
-                    <h4>Speaking fee</h4>
-                    <p>
-                        My speaking fee is dependent upon a number of factors such as the event type (open, closed, commercial, community, not-for-profit, etc),
-                        location (Europe vs further afield), date and proposed participation (keynote, talk, workshop, etc).
-                        Please contact me for further details.
-                    </p>
-                </div>
-                <div id="bio" class="tab-pane fade in">
-                    <h4>Simon Brown</h4>
-                    <h5>Independent Consultant</h5>
-                    <p>
-                        Simon is an independent consultant specialising in software architecture, and the author of
-                        <a href="https://leanpub.com/b/software-architecture">"Software Architecture for Developers"</a>
-                        (a developer-friendly guide to software architecture, technical leadership and the balance with agility).
-                        He is also the creator of the <a href="https://c4model.com">C4 software architecture model</a>,
-                        which is a simple approach for creating maps of your code. Simon is a regular speaker at international
-                        software development conferences, travelling the world to help organisations visualise and document their software architecture.
-                    </p>
-
-                    <p>
-                        <img src="./img/simonbrown.jpg" alt="Simon Brown" class="thumbnail" />
-                    </p>
-                </div>
-                <div id="talk1" class="tab-pane fade in">
-                    <h4>Software architecture for developers</h4>
-                    <h5>Duration: 45-60 minutes</h5>
-                    <p>
-                        The software development industry has made huge leaps in recent years; with agile, lean, software craftsmanship, evolutionary design and microservices being just a few of the buzzwords we throw around. Despite this, software development teams are often more chaotic than they are self-organising, with the resulting code being more of a mess than was perhaps anticipated. Successful software projects aren't just about good code though, and sometimes you need to step away from the IDE for a few moments to see the bigger picture. This session is about that bigger picture and is aimed at software developers who want to learn more about software architecture, technical leadership and the balance with agility. This talk will debunk some of the common myths as we look at five things every developer should know about software architecture; a guide to software architecture on modern software projects that's pragmatic rather than academic and lightweight rather than "enterprisey".
-                    </p>
-                </div>
-                <div id="talk2" class="tab-pane fade in">
-                    <h4>Visualising software architecture with the C4 model</h4>
-                    <h5>Duration: 45-90 minutes</h5>
-                    <p>
-                        It's very likely that the majority of the software architecture diagrams you've seen are a confused mess of boxes and lines. Following the publication of the Manifesto for Agile Software Development in 2001, teams have abandoned UML, discarded the concept of modelling and instead place a heavy reliance on conversations centered around incoherent whiteboard diagrams or shallow "Marketecture" diagrams created with Visio. Moving fast and being agile requires good communication, yet software development teams struggle with this fundamental skill. A good set of software architecture diagrams are priceless for aligning a team around a shared vision and for getting new-joiners productive fast.
-                    </p>
-                    <p>
-                        This session explores the visual communication of software architecture and is based upon a decade of my experiences working with software development teams large and small across the globe. We'll look at what is commonplace today, the importance of creating a shared vocabulary, diagram notation, and the value of creating a lightweight model to describe your software system using the "C4 model", which I created as a way to help software development teams describe and communicate software architecture, both during up-front design sessions and when retrospectively documenting an existing codebase.
-                    </p>
-                </div>
-                <div id="talk3" class="tab-pane fade in">
-                        <h4>The lost art of software design</h4>
-                        <h5>Duration: 45-60 minutes</h5>
-                        <p>
-                                "Big design up front is dumb. Doing no design up front is even dumber." This quote epitomises what I've seen during our journey from "big design up front" in the 20th century, to "emergent design" and "evolutionary architecture" in the 21st. In their desire to become "agile", many teams seem to have abandoned architectural thinking, up front design, documentation, diagramming, and modelling. In many cases this is a knee-jerk reaction to the heavy bloated processes of times past, and in others it's a misinterpretation and misapplication of the agile manifesto. As a result, many of the software design activities I witness these days are very high-level and superficial in nature. The resulting output, typically an ad hoc sketch on a whiteboard, is usually ambiguous and open to interpretation, leading to a situation where the underlying solution can't be assessed or reviewed. If you're willing to consider that up front design is about creating a sufficient starting point, rather than creating a perfect end-state, you soon realise that a large amount of the costly rework and "refactoring" seen on many software development teams can be avoided. Join me for a discussion of the lost art of software design, and how we can reintroduce it.
-                        </p>
-                </div>
-                <div id="talk4" class="tab-pane fade in">
-                        <h4>Modular monoliths</h4>
-                        <h5>Duration: 45-60 minutes</h5>
-                        <p>
-                            If you want evidence that the software development industry is susceptible to fashion, just go and take a look at all of the hype around microservices. It's everywhere! For some people microservices is "the next big thing", whereas for others it's simply a lightweight evolution of the big service-oriented architectures that we saw 10 years ago "done right". Microservices is by no means a silver bullet though, and the design thinking required to create a good microservices architecture is the same as that needed to create a well structured monolith. And this begs the question that if you can’t build a well-structured monolith, what makes you think microservices is the answer?
-                        </p>
+                <div class="col-sm-4 centered">
+                        <div class="centered hidden-phone">
+                            <a data-pin-do="embedBoard" href="https://www.pinterest.com/simonbrowndotje/work/" data-pin-scale-width="150" data-pin-scale-height="600" data-pin-board-width="600">Follow Simon Brown's board Work on Pinterest.</a>
+                            <script type="text/javascript" async src="https://assets.pinterest.com/js/pinit.js"></script>
+                        </div>
                     </div>
                 </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="container">
-            <a name="training"></a>
-            <h2>Training</h2>
-            <p>
-                I run software architecture training courses at organisations across the globe, the content of which is based upon my <a href="https://leanpub.com/b/software-architecture">Software Architecture for Developers</a> books.
-                These courses, which are aimed at software developers and architects, are a guide to software architecture on modern software projects that's pragmatic rather than academic and lightweight rather than "enterprisey".
-                See the following links or <a href="mailto:simon.brown@codingthearchitecture.com?subject=Software%20architecture%20training" target="_blank">e-mail me</a> for more details and pricing:
-            </p>
-
-            <ul>
-                <li><a href="https://softwarearchitecturefordevelopers.com">Software Architecture for Developers</a> (a 2-day introduction to software architecture)</li>
-                <li><a href="https://c4model.com">Visualising software architecture with the C4 model</a> (a 1-day hands-on software architecture diagramming workshop)</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="section sectionShaded">
-        <div class="container">
-            <a name="writing"></a>
-            <h2>Writing</h2>
-            <p>
-                I've authored and co-authored a number of books about software architecture, Java, etc.
-            </p>
-
-            <div class="row">
-                <div class="span3 centered">
-                    <a href="https://leanpub.com/software-architecture-for-developers"><img src="./img/sa4d-1.png" alt="Software Architecture for Developers: Volume 1" class="img-polaroid" /></a>
-                </div>
-                <div class="span3 centered">
-                    <a href="https://leanpub.com/visualising-software-architecture"><img src="./img/sa4d-2.png" alt="Software Architecture for Developers: Volume 2" class="img-polaroid" /></a>
-                </div>
-                <div class="span6 centered">
-                    <a href="http://www.ituring.com.cn/book/1444"><img src="./img/sa4d-chinese.jpg" alt="Software Architecture for Developers" class="img-polaroid" /></a>
-                    <a href="http://www.apress.com/java/jsp/9781590595138"><img src="./img/projsp2.png" alt="Pro JSP 2" class="img-polaroid" /></a>
-                    <a href="http://www.apress.com/java/jsp/9781590592250"><img src="./img/projsp3e.png" alt="Pro JSP 3rd Edition" class="img-polaroid" /></a>
-                    <br />
-                    <a href="http://www.amazon.com/Professional-JSP-Libraries-Simon-Brown/dp/1861006217"><img src="./img/projsptags.png" alt="Professional JSP Tag Libraries" class="img-polaroid" /></a>
-                    <a href="http://www.amazon.com/Professional-Java-Servlets-Andrew-Harbourne-Thomas/dp/186100561X"><img src="./img/projavaservlets.png" alt="Professional Java Servlets 2.3" class="img-polaroid" /></a>
-                    <a href="http://www.amazon.com/Professional-JSP-2nd-Simon-Brown/dp/1861004958/"><img src="./img/projsp2e.png" alt="Professional JSP 2nd Edition" class="img-polaroid" /></a>
-                </div>
-            </div>
-
-            <p>
-                I've also contributed some content to the following books, as well as being a technical reviewer on others.
-            </p>
-
-            <p align="center">
-                <a href="https://leanpub.com/talking-with-tech-leads" target="_blank"><img src="./img/talking-with-tech-leads.png" alt="Talking with Tech Leads" class="img-polaroid" width="100px" /></a>
-                <a href="https://pragprog.com/book/mkdsa/design-it" target="_blank"><img src="./img/design-it.jpg" alt="Design It!" class="img-polaroid" width="120px" /></a>
-                <a href="https://www.pearson.com/us/higher-education/program/Martin-Clean-Architecture-A-Craftsman-s-Guide-to-Software-Structure-and-Design/PGM333762.html" target="_blank"><img src="./img/clean-architecture.jpg" alt="Clean Architecture" class="img-polaroid" width="110px" /></a>
-            </p>
-            
-            <p>
-                And I've written articles for places like <a href="https://www.infoq.com/profile/Simon-Brown" target="_blank">InfoQ</a>, <a href="https://www.voxxed.com/author/simonbrown/" target="_blank">Voxxed</a>, <a href="http://www.methodsandtools.com/archive/softwarearchitecturesketches.php" target="_blank">Methods & Tools</a>, <a href="http://www.nljug.org/authors/simon-brown/" target="_blank">NLJUG</a>, etc.
-        </div>
-    </div>    
-
-    <div class="section">
-        <div class="container">
-            <a name="interviews"></a>
-            <h2>Interviews and podcasts</h2>
-            <p>
-                I've been interviewed for a number of magazines and podcasts.
-            </p>
-
-            <div class="row">
-                <div class="span8">
-                    <p align="center">
-                        <iframe width="100%" height="300" scrolling="no" frameborder="no" class="img-polaroid" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/349432809&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
-                    </p>
-
-                    <p align="center">
-                        <iframe src="https://www.youtube.com/embed/Wde05Vc9wXc" width="560" height="315" frameborder="0" allowfullscreen class="embed-responsive embed-responsive-16by9 centered img-polaroid"></iframe>
-                    </p>
-
-                    <p>
-                        And also <a href="https://www.infoq.com/podcasts/simon-brown-architecture" target="_blank">InfoQ</a>,
-                        <a href="https://blog.run.pivotal.io/a-conversation-with-pws-customer-simon-brown-on-architecture-and-platforms/" target="_blank">Pivotal Web Services</a>,
-                        <a href="https://softwareengineeringdaily.com/2017/06/20/software-architecture-with-simon-brown/" target="_blank">Software Engineering Daily</a>,
-                        <a href="http://www.se-radio.net/2015/06/episode-228-software-architecture-sketches-with-simon-brown/" target="_blank">Software Engineering Radio</a>,
-                        <a href="https://blog.fogcreek.com/lightweight-software-architecture-interview-with-simon-brown/" target="_blank">Fog Creek</a>,
-                        <a href="http://samnewman.io/blog/2015/12/01/magpie-talkshow-episode-6-simon-brown/" target="_blank">Magpie Talkshow</a>,
-                        <a href="https://theagilerevolution.com/2015/07/20/episode-91-coding-the-architecture-with-simon-brown/" target="_blank">The Agile Revolution</a>,
-                        <a href="https://www.youtube.com/watch?v=0fSRadBepYk" target="_blank">O'Reilly</a>,
-                        <a href="https://www.voxxed.com/2015/01/simon-brown-agile-architecture/" target="_blank">Voxxed</a>,
-                        <a href="http://www.dqmagazine.com/news/return-of-the-architect/" target="_blank">DQ magazine</a>, etc.
-                    </p>
-                </div>
-                <div class="span4">
-                    <p align="center">
-                        <a href="http://edition.pagesuite-professional.co.uk/html5/reader/production/default.aspx?pubname=&edid=56946dde-ea64-4adb-a432-f6bf9eaf744e&pnum=37" target="_blank"><img src="./img/business-brief.png" width="560" alt="Business Brief" class="img-polaroid" /></a>
-                    </p>
-                </div>
             </div>
         </div>
+
+        <div class="section">
+            <div class="container">
+                <a name="training"></a>
+                <h2>Training</h2>
+                <p>
+                    I run software architecture workshops at organisations across the globe, the content of which is based upon my <a href="https://leanpub.com/b/software-architecture">Software Architecture for Developers</a> books.
+                    These workshops, aimed at software developers and architects, are a guide to modern software architecture that's pragmatic rather than academic, and lightweight rather than "enterprisey".
+                    They are occasionally run publicly via training providers or conferences but most are private, on-site workshops held directly with organisations.
+                </p>
+
+                <ul>
+                    <li><a href="#training-sa4d">Software Architecture for Developers</a> (a 2-day introduction to software architecture)</li>
+                    <li><a href="#training-c4model">Visualising software architecture with the C4 model</a> (a 1-day hands-on software architecture diagramming workshop)</li>
+                </ul>
+
+                <br />
+
+                <div class="row">
+                    <div class="col-sm-1 centered">
+                    </div>
+                    <div class="col-sm-4 centered">
+                        <a href="https://s3.amazonaws.com/static.codingthearchitecture.com/training/software-architecture-for-developers.pdf" target="_blank"><img src="./img/slides-software-architecture-for-developers.png" alt="Software Architecture for Developers" class="img-thumbnail" /></a>
+                        <br />
+                        <div class="smaller">(~120MB .pdf file)</div>
+                    </div>
+                    <div class="col-sm-2 centered">
+                        <a href="https://s3.amazonaws.com/static.codingthearchitecture.com/training/financial-risk-system.pdf" target="_blank"><img src="./img/financial-risk-system.png" alt="Software Architecture for Developers" class="img-thumbnail" /></a>
+                    </div>
+                    <div class="col-sm-4 centered">
+                        <a href="https://s3.amazonaws.com/static.codingthearchitecture.com/training/visualising-software-architecture-with-the-c4-model-full-day.pdf" target="_blank"><img src="./img/slides-visualising-software-architecture-with-the-c4-model.png" alt="Visualising software architecture with the C4 model" class="img-thumbnail" /></a>
+                        <br />
+                        <div class="smaller">(~80MB .pdf file)</div>
+                    </div>
+                    <div class="col-sm-1 centered">
+                    </div>
+                </div>
+
+                <h3>Pricing, logistics and booking</h3>
+                <p>
+                    The pricing model is a flat fee based upon location, inclusive of my travel and accomodation, rather than a fee "per attendee".
+                    The recommended number of attendees is between 10 and 20, but there is no class size limit.
+                    From a logistics point of view, all we need is a room with a projector (HDMI or VGA) and some whiteboards/flip chart paper plus marker pens for the hands-on exercises.
+                    No laptops are needed, and the timings are flexible.
+                    <a href="mailto:simon@architectis.je?subject=Software%20architecture%20training" target="_blank">E-mail me for more details, pricing, or to book a workshop.</a>
+                </p>
+    
+                <a name="training-sa4d"></a>
+                <h3>Workshop #1: Software Architecture for Developers (2 days)</h3>
+
+                <p>
+                    This 2-day workshop will give you an introduction to a pragmatic and practical approach to software architecture; including technical leadership, communication and how to balance up front design with agile approaches.
+                </p>
+    
+                <div class="row">
+                    <div class="col-sm-6 small">
+                        <h5>Agenda - Day 1</h5>
+                        <ul>
+                            <li><b>[09:00 - 09:15] Introductions</b></li>
+                            <li><b>[09:15 - 09:45] Architecture</b>
+                                <ul>
+                                    <li>What is software architecture?</li>
+                                    <li>Architecture vs design</li>
+                                    <li>The importance of software architecture</li>
+                                </ul>
+                            </li>
+                            <li><b>[09:45 - 10:15] Architectural drivers</b>
+                                <ul>
+                                    <li>Requirements</li>
+                                    <li>Quality attributes</li>
+                                    <li>Constraints</li>
+                                    <li>Principles</li>
+                                    <li>Agility</li>
+                                </ul>
+                            </li>
+                            <li style="color: gray"><b>[10:15 - 10:45] Morning break</b></li>
+                            <li><b>[10:45 - 12:30] Software design exercise</b>
+                                <ul>
+                                    <li>Software design exercise</li>
+                                    <li>Design exercise review #1</li>
+                                </ul>
+                            </li>
+                            <li style="color: gray"><b>[12:30 - 13:30] Lunch</b></li>
+                            <li><b>[13:30 - 14:30] Architects</b>
+                                <ul>
+                                    <li>A definition of the software architecture role</li>
+                                    <li>Technical leadership and the different leadership styles</li>
+                                    <li>Technical skills</li>
+                                    <li>Soft skills</li>
+                                    <li>Software architecture and coding</li>
+                                </ul>
+                            </li>
+                            <li style="color: gray"><b>[14:30 - 15:00] Afternoon break</b></li>
+                            <li><b>[15:00 - 16:15] Visualising software architecture</b>
+                                <ul>
+                                    <li>Design exercise review #2</li>
+                                    <li>Diagramming anti-patterns and typical problems</li>
+                                    <li>The "model-code gap"</li>
+                                </ul>
+                            </li>
+                            <li><b>[16:15 - 16:30] Discussion, questions and wrap-up</b></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 small">
+                        <h5>Agenda - Day 2</h5>
+                        <ul>
+                            <li><b>[09:00 - 10:15] C4 model - core diagrams</b>
+                            <ul>
+                                <li>Abstractions and creating a shared vocabulary with a ubiquitous language</li>
+                                <li>An overview of the C4 model</li>
+                                <li>Notation and tips for better diagrams</li>
+                                <li>System Context diagrams</li>
+                                <li>Container diagrams</li>
+                                <li>Component diagrams</li>
+                            </ul>
+                            </li>
+                            <li style="color: gray"><b>[10:15 - 10:45] Morning break</b></li>
+                            <li><b>[10:45 - 12:30] Software design exercise</b>
+                                <ul>
+                                    <li>Software design exercise</li>
+                                    <li>Design exercise review #3</li>
+                                </ul>
+                            </li>
+                            <li style="color: gray"><b>[12:30 - 13:30] Lunch</b></li>
+                            <li><b>[13:30 - 14:00] C4 model - supplementary diagrams</b>
+                                <ul>
+                                    <li>C4 and UML</li>
+                                    <li>System Landscape diagrams</li>
+                                    <li>Dynamic diagrams</li>
+                                    <li>Deployment diagrams</li>
+                                    <li>Frequently asked questions</li>
+                                </ul>
+                            </li>
+                            <li><b>[14:00 - 14:30] Documenting software architecture</b>
+                                <ul>
+                                    <li>The importance of documentation</li>
+                                    <li>Writing lightweight supplementary documentation using a "software guidebook" or arc42</li>
+                                </ul>
+                            </li>
+                            <li style="color: gray"><b>[14:30 - 15:00] Afternoon break</b></li>
+                            <li><b>[15:00 - 15:30] Tooling</b>
+                                <ul>
+                                    <li>Diagrams vs models</li>
+                                    <li>Extracting software architecture information from code and "architecturally-evident coding styles"</li>
+                                </ul>
+                            </li>
+                            <li><b>[15:30 - 16:15] Software architecture in the delivery process</b>
+                                <ul>
+                                    <li>Quantifying and prioritising risk</li>
+                                    <li>Identifying risk with risk-storming</li>
+                                    <li>Design exercise review #4</li>
+                                    <li>Waterfall, RUP, agile, etc</li>
+                                    <li>The conflict between architure and agile</li>
+                                    <li>Approaching software architecture in a pragmatic, lightweight way</li>
+                                    <li>How much up front design is enough?</li>
+                                </ul>
+                            </li>
+                            <li><b>[16:15 - 16:30] Discussion, questions and wrap-up</b></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <a name="training-c4model"></a>
+                <h3>Workshop #2: Visualising software architecture with the C4 model (1 day)</h3>
+                <p>
+                    "Visualising software architecture with the C4 model" is a hands-on, half-day or full-day workshop that focusses on the visualisation and communication of software architecture using the C4 model.
+                    The core of this workshop can be based upon a simple case study (an architecture kata) or your own software systems.
+                    This workshop will give you some pragmatic, practical and lightweight techniques that you can apply to your work the very next day. You'll learn why most software architecture diagrams are meaningless, how to critique them, how to fix them and how to use the C4 model to create a simple yet powerful set of developer-friendly diagrams to describe software architecture.
+                    This workshop is best run as a full-day session, but the half-day version is sufficient for learning how to use the C4 model.
+                </p>
+
+                <div class="row">
+                    <div class="col-sm-6 small">
+                        <h5>Agenda (full-day version)</h5>
+                        <ul>
+                            <li><b>[09:00 - 09:15] Introductions</b></li>
+                            <li><b>[09:15 - 11:00] Software diagramming exercise</b></li>
+                            <li><b>[11:00 - 12:30] Review and feedback</b></li>
+                            <ul>
+                                <li>Diagramming anti-patterns and typical problems</li>
+                                <li>The "model-code gap"</li>
+                            </ul>
+                            <li style="color: gray"><b>[12:30 - 13:30] Lunch</b></li>
+                            <li><b>[13:30 - 16:00] C4 model - core diagrams</b>
+                                <ul>
+                                    <li>Abstractions and creating a shared vocabulary with a ubiquitous language</li>
+                                    <li>An overview of the C4 model</li>
+                                    <li>Notation and tips for better diagrams</li>
+                                    <li>System Context diagrams</li>
+                                    <li>Container diagrams</li>
+                                    <li>Component diagrams</li>
+                                </ul>
+                            </li>
+                            <li><b>[16:00 - 16:30] C4 model - supplementary diagrams</b>
+                                <ul>
+                                    <li>C4 and UML</li>
+                                    <li>System Landscape diagrams</li>
+                                    <li>Dynamic diagrams</li>
+                                    <li>Deployment diagrams</li>
+                                    <li>Frequently asked questions</li>
+                                </ul>
+                            </li>
+                            <li><b>[16:30 - 16:45] Tooling</b>
+                                <ul>
+                                    <li>Diagrams vs models</li>
+                                    <li>Extracting software architecture information from code and "architecturally-evident coding styles"</li>
+                                </ul>
+                            </li>
+                            <li><b>[16:45 - 17:00] Discussion, questions and wrap-up</b></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 small">
+                        <h5>Agenda (half-day version)</h5>
+                        <ul>
+                            <li><b>[09:00 - 09:15] Introductions</b></li>
+                            <li><b>[09:15 - 10:15] A summary of current diagramming practices</b></li>
+                            <ul>
+                                <li>Diagramming anti-patterns and typical problems</li>
+                                <li>The "model-code gap"</li>
+                            </ul>
+                            <li><b>[10:15 - 12:15] C4 model - core diagrams</b>
+                                <ul>
+                                    <li>Abstractions and creating a shared vocabulary with a ubiquitous language</li>
+                                    <li>An overview of the C4 model</li>
+                                    <li>Notation and tips for better diagrams</li>
+                                    <li>System Context diagrams</li>
+                                    <li>Container diagrams</li>
+                                    <li>Component diagrams</li>
+                                </ul>
+                            </li>
+                            <li><b>[12:15 - 12:30] Discussion, questions and wrap-up</b></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p>
+                    <a href="mailto:simon@architectis.je?subject=Software%20architecture%20training" target="_blank">E-mail me for more details, pricing, or to book a workshop.</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="container">
+                <a name="writing"></a>
+                <h2>Writing</h2>
+                <p>
+                    I've authored and contributed content a number of books, as well as being a technical reviewer on others.
+                    I've also written articles for places like <a href="https://www.infoq.com/profile/Simon-Brown" target="_blank">InfoQ</a>, <a href="https://www.voxxed.com/author/simonbrown/" target="_blank">Voxxed</a>, <a href="http://www.methodsandtools.com/archive/softwarearchitecturesketches.php" target="_blank">Methods & Tools</a>, <a href="http://www.nljug.org/authors/simon-brown/" target="_blank">NLJUG</a>, etc.
+
+                <div class="row">
+                    <div class="col-xs-3 centered">
+                    </div>
+                    <div class="col-xs-3 centered">
+                        <a href="https://leanpub.com/software-architecture-for-developers"><img src="./img/sa4d-1.png" alt="Software Architecture for Developers: Volume 1" class="img-thumbnail" /></a>
+                    </div>
+                    <div class="col-xs-3 centered">
+                        <a href="https://leanpub.com/visualising-software-architecture"><img src="./img/sa4d-2.png" alt="Software Architecture for Developers: Volume 2" class="img-thumbnail" /></a>
+                    </div>
+                    <div class="col-xs-3 centered">
+                    </div>
+                </div>
+
+                <p align="center">
+                    <a href="http://www.ituring.com.cn/book/1444"><img src="./img/sa4d-chinese.jpg" alt="Software Architecture for Developers" class="img-thumbnail" /></a>
+                    <a href="http://www.apress.com/java/jsp/9781590595138"><img src="./img/projsp2.png" alt="Pro JSP 2" class="img-thumbnail" /></a>
+                    <a href="http://www.apress.com/java/jsp/9781590592250"><img src="./img/projsp3e.png" alt="Pro JSP 3rd Edition" class="img-thumbnail" /></a>
+                    <a href="http://www.amazon.com/Professional-JSP-Libraries-Simon-Brown/dp/1861006217"><img src="./img/projsptags.png" alt="Professional JSP Tag Libraries" class="img-thumbnail" /></a>
+                    <a href="http://www.amazon.com/Professional-Java-Servlets-Andrew-Harbourne-Thomas/dp/186100561X"><img src="./img/projavaservlets.png" alt="Professional Java Servlets 2.3" class="img-thumbnail" /></a>
+                    <a href="http://www.amazon.com/Professional-JSP-2nd-Simon-Brown/dp/1861004958/"><img src="./img/projsp2e.png" alt="Professional JSP 2nd Edition" class="img-thumbnail" /></a>
+                    <a href="https://leanpub.com/talking-with-tech-leads" target="_blank"><img src="./img/talking-with-tech-leads.png" alt="Talking with Tech Leads" class="img-thumbnail" /></a>
+                    <a href="https://pragprog.com/book/mkdsa/design-it" target="_blank"><img src="./img/design-it.jpg" alt="Design It!" class="img-thumbnail" /></a>
+                    <a href="https://www.pearson.com/us/higher-education/program/Martin-Clean-Architecture-A-Craftsman-s-Guide-to-Software-Structure-and-Design/PGM333762.html" target="_blank"><img src="./img/clean-architecture.jpg" alt="Clean Architecture" class="img-thumbnail" /></a>
+                </p>
+            </div>
+        </div>    
+
+        <div id="footer">
+            <p>
+                <a href="https://twitter.com/simonbrown">@simonbrown</a>
+                |
+                <a href="mailto:simon@architectis.je" target="_blank">simon@architectis.je</a>
+            </p>
+            <a rel="author" href="https://plus.google.com/u/0/115820315163230687850?rel=author">
+        </div>
     </div>
-
-    <footer>
-        <p>
-            <a href="https://twitter.com/simonbrown">@simonbrown</a>
-            |
-            <a href="mailto:simon.brown@codingthearchitecture.com" target="_blank">simon.brown@codingthearchitecture.com</a>
-        </p>
-        <a rel="author" href="https://plus.google.com/u/0/115820315163230687850?rel=author">
-    </footer>
-
-    <script src="./js/bootstrap.min.js"></script>
-
 </body>
 </html>

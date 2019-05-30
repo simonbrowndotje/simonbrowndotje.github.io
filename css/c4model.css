@@ -7,14 +7,13 @@ body {
     text-align: center;
 }
 #header {
-    height: 400px;
-    background: #08427B;
-    color: #ffffff;
-    text-align: center;
-    padding: 100px 10px 100px 10px;
+  background: #08427B;
+  color: #ffffff;
+  text-align: center;
+  padding: 100px 10px 100px 10px;
 }
 #header .label {
-    font-size: 13px;
+  font-size: 13px;
 }
 #footer {
     text-align: center;
@@ -60,7 +59,7 @@ h1 {
 }
 #header h1 {
     font-weight: bold;
-    font-size: 100px;
+    font-size: 50px;
     color: #ffffff;
 }
 h2 {
@@ -152,22 +151,33 @@ a:hover {
     margin-left: 10px;
     margin-right: 10px;
 }
-#publicSpeakingSchedule li {
-    min-height: 30px;
-    font-size: 12px;
+.modal-dialog {
+    width: 95%;
+    height: 100%;
+    padding: 0;
+    margin: auto;
 }
-.flag {
-    width: 30px;
-    margin: 5px;
-}
-.eventType {
-  color: gray;
-  font-size: 80%;
-}
-.tagline {
-  font-size: 20px;
-  font-weight: bold;
-  padding-bottom: 20px;
+.modal-content {
+    height: 100%;
+    min-height: 100%;
+    height: auto;
 }
 
+.carousel-caption {
+    background: #02172C;
+    color: #ffffff;
+    text-shadow: none;
+    font-size: 18px;
+    opacity: 0.9;
+    padding: 20px;
+    border-radius: 5px;
+}
 
+.carousel-control {
+    color: #000000;
+    text-shadow: none;
+    opacity: 0.1;
+}
+.carousel-control:hover, .carousel-control:focus {
+    opacity: 0.1;
+}
