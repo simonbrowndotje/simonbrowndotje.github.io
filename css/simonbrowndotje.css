@@ -155,15 +155,17 @@ a:hover {
 }
 #publicSpeakingSchedule li {
     min-height: 30px;
-    font-size: 12px;
 }
 .flag {
     width: 30px;
     margin: 5px;
 }
 .eventType {
-  color: gray;
-  font-size: 80%;
+    color: black;
+    font-size: 80%;
+    display: block;
+    margin-left: 45px;
+    margin-bottom: 20px;
 }
 .tagline {
   font-size: 20px;
