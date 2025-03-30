@@ -12,6 +12,7 @@
 
     <script src="./js/jquery-2.0.3.min.js"></script>
     <script src="./js/bootstrap-3.3.2.min.js"></script>
+    <script src="https://docs.structurizr.com/assets/js/ad.js"></script>
 
     <link href="./css/simonbrowndotje.css" rel="stylesheet" media="screen">
 
@@ -31,6 +32,10 @@
                     I'm also the creator of the <a href="https://c4model.com">C4 software architecture model</a>
                     and the founder of <a href="https://structurizr.com">Structurizr</a>, a collection of tooling to help software teams visualise, document and explore their software architecture.
                 </p>
+
+                <div class="centered">
+                    <div id="ad" style="margin-top: 40px; max-width: 728px; margin-left: auto; margin-right: auto;"></div>
+                </div>
             </div>
         </div>
 
@@ -627,12 +632,24 @@
 
         <div id="footer">
             <p>
-                <a href="https://twitter.com/simonbrown">@simonbrown</a>
+                <a href="https://bsky.app/profile/simonbrown.je">Bluesky</a>
                 |
-                <a href="mailto:hello@architectis.je" target="_blank">hello@architectis.je</a>
+                <a href="https://x.com/simonbrown">X</a>
+                |
+                <a href="https://www.linkedin.com/in/simonbrownjersey/">LinkedIn</a>
+                |
+                <a href="mailto:hello@architectis.je" target="_blank">E-mail</a>
             </p>
-            <a rel="author" href="https://plus.google.com/u/0/115820315163230687850?rel=author">
         </div>
     </div>
 </body>
+
+<script>
+    showAd('ad', 'https://docs.structurizr.com');
+    const adImage = $('#ad img');
+    adImage.css('width', '');
+    adImage.css('height', '');
+    adImage.addClass('img-responsive');
+</script>
+
 </html>

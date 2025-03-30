@@ -22,11 +22,11 @@ body {
     padding-bottom: 20px;
     padding-left: 0;
     padding-right: 0;
-    color: #ffffff;
-    background: #02172C;
+    color: #000000;
+    background: #ffffff;
 }
 #footer a, #footer a:hover {
-    color: white;
+    color: #000000;
 }
 #footer .container {
     font-size: 13px;
@@ -37,20 +37,20 @@ body {
     padding-right: 10px;
 }
 .section {
-    border-bottom: 1px solid #f2f2f2;
+    /* border-bottom: 1px solid #f2f2f2; */
     margin-right: 0;
     margin-left: 0;
-    padding-top: 30px;
+    padding-top: 70px;
     padding-bottom: 30px;
     padding-left: 10px;
     padding-right: 10px;
 }
-.section:nth-child(even) {
+/* .section:nth-child(even) {
     background: #eeeeee;
 }
 .section:nth-child(odd) {
     background: #ffffff;
-}
+} */
 .row {
     padding-bottom: 20px;
 }
