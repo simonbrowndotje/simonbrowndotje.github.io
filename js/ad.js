@@ -2,13 +2,13 @@ const ads = [
     {
         img: 'patreon-structurizr.png',
         href: 'https://patreon.com/structurizr',
-        expiry: new Date('2025-12-31'),
+        expiry: new Date('2026-12-31'),
         targets: [ 'structurizr', 'simonbrown' ]
     },
     {
         img: 'patreon-c4model.png',
         href: 'https://patreon.com/c4model',
-        expiry: new Date('2025-12-31'),
+        expiry: new Date('2026-12-31'),
         targets: [ 'c4model', 'simonbrown' ]
     },
     {
