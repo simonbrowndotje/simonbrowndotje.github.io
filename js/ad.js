@@ -35,32 +35,33 @@ function showAd(id, target) {
     try {
         const baseUrl = 'https://simonbrown.je';
 
-        var ad;
-        if (target === undefined) {
-            while (ad === undefined || ad.expiry < new Date()) {
-                const randomNumber = Math.floor(Math.random() * ads.length);
-                ad = ads[randomNumber];
+        const possibleAds = [];
+        ads.forEach(function(ad) {
+            if (target === undefined || ad.targets.indexOf(target) > -1) {
+                if (new Date() < ad.expiry) {
+                    possibleAds.push(ad);
+                }
             }
-        } else {
-            while (ad === undefined || ad.expiry < new Date() || ad.targets.indexOf(target) === -1) {
-                const randomNumber = Math.floor(Math.random() * ads.length);
-                ad = ads[randomNumber];
-            }
+        });
+
+        if (possibleAds.length > 0) {
+            const randomNumber = Math.floor(Math.random() * possibleAds.length);
+            const ad = possibleAds[randomNumber];
+
+            const img = document.createElement('img');
+            img.src = baseUrl + '/img/ads/' + ad.img;
+            img.style.width = '728px';
+            img.style.borderRadius = '5px';
+            img.style.border = 'solid 1px black';
+
+            const a = document.createElement('a');
+            a.href = ad.href;
+            a.target = '_blank';
+            a.append(img);
+
+            const mainContentElement = document.getElementById(id);
+            mainContentElement.insertBefore(a, mainContentElement.firstChild);
         }
-
-        const img = document.createElement('img');
-        img.src = baseUrl + '/img/ads/' + ad.img;
-        img.style.width = '728px';
-        img.style.borderRadius = '5px';
-        img.style.border = 'solid 1px black';
-
-        const a = document.createElement('a');
-        a.href = ad.href;
-        a.target = '_blank';
-        a.append(img);
-
-        const mainContentElement = document.getElementById(id);
-        mainContentElement.insertBefore(a, mainContentElement.firstChild);
     } catch (e) {
         log.warn(e);
     }
