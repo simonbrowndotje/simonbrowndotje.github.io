@@ -63,6 +63,6 @@ function showAd(id, target) {
             mainContentElement.insertBefore(a, mainContentElement.firstChild);
         }
     } catch (e) {
-        log.warn(e);
+        console.log(e);
     }
 }
