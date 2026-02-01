@@ -60,7 +60,9 @@ function showAd(id, target) {
             a.append(img);
 
             const mainContentElement = document.getElementById(id);
-            mainContentElement.insertBefore(a, mainContentElement.firstChild);
+            if (mainContentElement) {
+                mainContentElement.insertBefore(a, mainContentElement.firstChild);
+            }
         }
     } catch (e) {
         console.log(e);
