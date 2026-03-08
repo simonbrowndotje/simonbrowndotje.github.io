@@ -12,6 +12,18 @@ const ads = [
         targets: [ 'c4model', 'simonbrown' ]
     },
     {
+        img: 'book.png',
+        href: 'https://www.oreilly.com/library/view/the-c4-model/9798341660113/',
+        expiry: new Date('2026-12-31'),
+        targets: [ 'c4model', 'structurizr', 'simonbrown' ]
+    },
+    {
+        img: 'structurizr.png',
+        href: 'https://docs.structurizr.com',
+        expiry: new Date('2026-12-31'),
+        targets: [ 'c4model', 'simonbrown' ]
+    },
+    {
         img: 'trifork-nl.png',
         href: 'https://trifork.nl/academy/our-courses/software-architecture-for-developers/',
         expiry: new Date('2025-11-11'),
