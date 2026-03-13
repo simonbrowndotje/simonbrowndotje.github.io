@@ -26,19 +26,25 @@ const ads = [
     {
         img: 'trifork-nl.png',
         href: 'https://trifork.nl/academy/our-courses/software-architecture-for-developers/',
-        expiry: new Date('2025-11-11'),
+        expiry: new Date('2026-05-11'),
         targets: [ 'structurizr', 'c4model', 'simonbrown' ]
     },
     {
-        img: 'yow-melbourne.png',
-        href: 'https://yowcon.com/melbourne-2025/masterclasses/541/visualising-software-architecture-with-the-c4-model',
-        expiry: new Date('2025-12-02'),
+        img: 'goto-cph.png',
+        href: 'https://gotocph.com/2026/masterclasses/583/2-days-software-architecture-for-developers',
+        expiry: new Date('2026-09-27'),
         targets: [ 'structurizr', 'c4model', 'simonbrown' ]
     },
     {
-        img: 'yow-sydney.png',
-        href: 'https://yowcon.com/sydney-2025/masterclasses/542/visualising-software-architecture-with-the-c4-model',
-        expiry: new Date('2025-12-09'),
+        img: 'sa4d-workshop.png',
+        href: 'https://simonbrown.je/#workshops',
+        expiry: new Date('2026-12-31'),
+        targets: [ 'structurizr', 'c4model', 'simonbrown' ]
+    },
+    {
+        img: 'c4-workshop.png',
+        href: 'https://simonbrown.je/#workshops',
+        expiry: new Date('2026-12-31'),
         targets: [ 'structurizr', 'c4model', 'simonbrown' ]
     }
 ];
