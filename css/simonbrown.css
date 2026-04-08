@@ -1,0 +1,101 @@
+body {
+    font-family: Tahoma, sans-serif;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+}
+.centered {
+    text-align: center;
+}
+.container {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.section {
+    margin-right: 0;
+    margin-left: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.row {
+    padding-bottom: 20px;
+}
+h1 {
+    font-weight: normal;
+    font-size: 50px;
+}
+h2 {
+    font-weight: normal;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+h3 {
+    font-size: 25px;
+    font-weight: normal;
+}
+h4 {
+    font-size: 20px;
+    font-weight: bold;
+}
+h5 {
+    font-size: 16px;
+    font-weight: bold;
+}
+h2 a, h3 a {
+    text-decoration: none;
+}
+h2 a:hover, h3 a:hover {
+    text-decoration: underline;
+}
+.mapCaption {
+    margin-top: 10px;
+    font-size: 11px;
+    text-align: center;
+}
+.caption {
+    margin-top: 10px;
+    font-size: 13px;
+    text-align: center;
+}
+.img-thumbnail {
+    color: #ddd;
+}
+a {
+    color: #1168BD;
+    font-weight: normal;
+}
+a:hover {
+    color: #08427B;
+}
+.grayscale {
+    -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+    filter: grayscale(100%);
+}
+.grayscale:hover {
+    -webkit-filter: none; /* Chrome, Safari, Opera */
+    filter: none;
+}
+.small {
+    font-size: 13px;
+}
+.smaller {
+    font-size: 11px;
+}
+#publicSpeakingSchedule li {
+    min-height: 30px;
+}
+.flag {
+    width: 30px;
+    margin: 5px;
+}
+.event {
+    margin-bottom: 20px;
+}
+.eventLocation {
+    font-size: 80%;
+}
+.eventMetadata {
+    font-size: 80%;
+}

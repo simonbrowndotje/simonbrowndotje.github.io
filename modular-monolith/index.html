@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Simon Brown - Modular monolith</title>
+
+    <link href="../css/bootstrap-5.3.8.min.css" rel="stylesheet" media="screen">
+    <link href="../css/simonbrown.css" rel="stylesheet" media="screen">
+
+    <script src="../js/bootstrap-5.3.8.min.js"></script>
+    <script src="../js/ad.js"></script>
+</head>
+
+<body>
+    <div class="section">
+        <div class="container centered">
+            <div>
+                <div id="ad" style="margin-top: 0px; margin-bottom: 50px; max-width: 728px; margin-left: auto; margin-right: auto;"></div>
+            </div>
+
+            <h1>Simon Brown</h1>
+            <h2>Modular monolith and "package by component"</h2>
+
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-4">
+                    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I&#39;ll keep saying this ... if people can&#39;t build monoliths properly, microservices won&#39;t help. <a href="https://twitter.com/hashtag/qconlondon?src=hash&amp;ref_src=twsrc%5Etfw">#qconlondon</a> <a href="https://twitter.com/hashtag/DesignThinking?src=hash&amp;ref_src=twsrc%5Etfw">#DesignThinking</a> <a href="https://twitter.com/hashtag/Modularity?src=hash&amp;ref_src=twsrc%5Etfw">#Modularity</a></p>&mdash; Simon Brown (@simonbrown) <a href="https://twitter.com/simonbrown/status/573072777147777024?ref_src=twsrc%5Etfw">March 4, 2015</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                <div class="col-4 centered">
+                    <p class="embed-responsive embed-responsive-16by9 centered img-responsive">
+                        <iframe src="https://www.youtube.com/embed/5OjqD-ow8GE" frameborder="0" allowfullscreen></iframe>
+                    </p>
+                    <p style="font-size: 11px">
+                        <b>Modular monoliths</b>
+                        <br />
+                        GOTO Berlin 2018 - Berlin, Germany - November 2018
+                    </p>
+                </div>
+                <div class="col-2"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container">
+            <h3>An alternative to package by layer, package by feature, and ports & adapters/hexagonal architecture</h3>
+            <p>
+                Let's imagine that we're building an online book store, and one of the features we've been asked to implement is about customers
+                being able to view the status of their orders. Although this is a Java example, the principles apply equally to other programming
+                languages. Let's look at a number of approaches to design and code organisation.
+            </p>
+
+            <br />
+            
+            <h3>Package by layer</h3>
+            <p>
+                The first, and perhaps simplest, design approach is the traditional "horizontal" layered architecture, where we separate our code
+                based upon what it does from a technical perspective. This is often called, "package by layer". Here's what this might look like
+                as a UML class diagram.
+            </p>
+
+            <p class="centered">
+                <a href="package-by-layer-1.png"><img src="package-by-layer-1.png" class="img-thumbnail" style="max-height: 90vh;"/></a>
+            </p>
+
+            <p>
+                In this typical layered architecture, we have one layer for the web code, one for our "business logic" and one for persistence.
+                In other words, code is sliced horizontally into layers, which are used as a way to group similar types of things. In a
+                "strict layered architecture", layers should only depend on the next adjacent lower layer. In Java, layers are typically
+                implemented as packages. As you can see from the diagram, all of the dependencies between layers (packages) point downwards.
+                The Java types we have in the example are:
+            </p>
+
+            <ul>
+                <li><code>OrdersController</code>: A web controller, something like a Spring MVC controller, which handles requests from the web.</li>
+                <li><code>OrdersService</code>: An interface that defines the "business logic" related to orders.</li>
+                <li><code>OrdersServiceImpl</code>: The implementation of the above service.</li>
+                <li><code>OrdersRepository</code>: An interface that defines how we get access to persistent order information.</li>
+                <li><code>JdbcOrdersRepository</code>: An implementation of the above repository interface.</li>
+            </ul>
+
+            <p>
+                In <a href="https://martinfowler.com/bliki/PresentationDomainDataLayering.html" target="_blank">Presentation Domain Data Layering</a>,
+                Martin Fowler says that adopting such a layered architecture is a good way to get started. He's not alone. Many of the books,
+                tutorials, training courses and sample code you'll find will also point you down the path of creating a layered architecture.
+                It's a very quick way to get something up and running without a huge amount of complexity. The problem, as Martin points out,
+                is that once your software grows in scale and complexity, you will quickly find that having three large buckets of code isn't
+                sufficient, and you will need to think about modularising further.
+            </p>
+
+            <p>
+                Another problem is that a layered architecture doesn't "scream" anything about the business domain. Put the code for two layered
+                architectures, from two very different business domains, side by side and they will likely look eerily similar: web, services,
+                and repositories. There's also another huge problem with layered architectures, but we'll get to that later.
+            </p>
+
+            <br />
+            
+            <h3>Package by feature</h3>
+            <p>
+                Another option for organising your code is to adopt a "package by feature" style. This is a "vertical" slicing, based upon related
+                features, domain concepts, bounded contexts, or aggregate roots. In the typical implementations that I've
+                seen, all of the types are placed into a single Java package, which is named to reflect the concept that is being grouped.
+            </p>
+
+            <p class="centered">
+                <a href="package-by-feature-1.png"><img src="package-by-feature-1.png" class="img-thumbnail" style="max-height: 90vh;"/></a>
+            </p>
+
+            <p>
+                Here, we have the same interfaces and classes as before, but they are all placed into a single Java package rather than being split
+                between three packages. This is a very simple refactoring from the "package by layer" style, but the top-level organisation of the
+                code now screams something about the business domain. We can now see that this codebase has something to do with orders rather than
+                the web, services, and repositories. Another benefit is that it's potentially easier to find all of the code that you need to modify
+                in the event that the "view orders" feature changes. It's all sitting in a single Java package rather than being spread out.
+                This benefit is much less relevant with the navigation facilities of modern IDEs, of course.
+            </p>
+
+            <p>
+                I often see software development teams realise that they have problems with horizontal layering ("package by layer") and switch to
+                vertical layering ("package by feature") instead. Both, in my opinion, are suboptimal, with teams just switching from one extreme
+                to the other.
+            </p>
+
+            <br />
+
+            <h3>Ports and adapters</h3>
+            <p>
+                Approaches like "ports and adapters", "hexagonal architecture", "onion architecture", "clean architecture",
+                "boundaries, controllers, entities", etc aim to create architectures where business/domain focussed code is independent and
+                separate from the technical implementation details such as frameworks and databases. To summarise, you often see such codebases
+                being composed of an "inside" (domain) and an "outside" (infrastructure).
+            </p>
+
+            <p class="centered">
+                <a href="domain-infrastructure.png"><img src="domain-infrastructure.png" class="img-thumbnail" style="max-height: 60vh;"/></a>
+            </p>
+
+            <p>
+                The "inside" region contains all of the domain concepts, whereas the "outside" region contains the interactions with the outside
+                world (UIs, databases, third-party integrations, etc). The major rule here is that the "outside" depends on the "inside"; never
+                the other way around. Here's a version of how the "view orders" feature might be implemented.
+            </p>
+
+            <p class="centered">
+                <a href="ports-and-adapters-1.png"><img src="ports-and-adapters-1.png" class="img-thumbnail" style="max-height: 90vh;"/></a>
+            </p>
+
+            <p>
+                The <code>com.mycompany.myapp.domain</code> package here is the "inside", and the other packages are the "outside". Notice how
+                the dependencies flow towards the "inside". The keen-eyed reader will notice that the <code>OrdersRepository</code> from previous
+                diagrams has been renamed to simply be <code>Orders</code>. This comes from the world of Domain-Driven Design, where the advice
+                is that the naming of everything on the "inside" should be stated in terms of the "ubiquitous domain language". Or, to put that
+                another way, we talk about "orders" when we're having a discussion about the domain, not the "orders repository".
+            </p>
+
+            <p>
+                It's also worth pointing out that this is a simplified version of what the UML class diagram might look like, because it's
+                missing things like interactors and objects to marshal the data across the dependency boundaries.
+            </p>
+
+            <br />
+
+            <h3>Package by component</h3>
+            <p>
+                I'm going to present another option, which I call "package by component". To give you some background, I've spent most of
+                my career building enterprise software, primarily in Java, across a number of different business domains. Those software
+                systems have varied immensely too. A large number have been web-based but others have been client-server, distributed,
+                message-based, etc. Although the technologies differed, the common theme was that the architecture for most of these software
+                systems was based upon a traditional layered architecture.
+            </p>
+
+            <p>
+                I've already mentioned a couple of reasons why layered architectures should be considered "bad", but that's not the whole story.
+                The purpose of a layered architecture is to separate code that has the same sort of function. Web stuff is separated from
+                "business logic", which is subsequently separated from data access. As we saw from the UML class diagram, from an implementation
+                perspective, a layer typically equates to a Java package. From a code accessibility perspective, in order for the
+                <code>OrdersController</code> to be able to have a dependency on the <code>OrdersService</code> interface, the
+                <code>OrdersService</code> interface needs to be marked as public, because they are in different packages. And likewise,
+                the <code>OrdersRepository</code> interface needs to be marked as public so that it can be seen outside of the repository package,
+                by the <code>OrdersServiceImpl</code> class.
+            </p>
+
+            <p>
+                As I said earlier, in a "strict layered architecture", the dependency arrows should always point downwards, with layers only
+                depending upon the next adjacent lower layer. This comes back to creating a nice clean acyclic dependency graph, which is
+                achieved by introducing some rules about how elements in a codebase should depend upon each other. The big problem here is
+                that we can cheat by introducing some undesirable dependencies, yet still create a nice acyclic dependency graph.
+            </p>
+
+            <p>
+                Let's imagine that you hire somebody new onto your team, and you give them another orders related feature to implement. Since
+                they're new, they want to make a big impression and get this feature implemented as fast as possible. After sitting down with
+                a coffee for a few minutes, they discover an existing <code>OrdersController</code> class, so they decide that's where the code
+                for the new orders related web page should go. But it needs some orders data from the database. "Oh, there's an
+                <code>OrdersRepository</code> interface already built too. I can simply dependency inject the implementation into my controller.
+                Perfect!", they think to themselves. After a few more minutes of hacking, the web page is working. But the resulting UML diagram
+                looks like this.
+            </p>
+
+            <p class="centered">
+                <a href="package-by-layer-2.png"><img src="package-by-layer-2.png" class="img-thumbnail" style="max-height: 90vh;"/></a>
+            </p>
+
+            <p>
+                The dependency arrows still point downwards, but the <code>OrdersController</code> is now additionally bypassing the
+                <code>OrdersService</code> for some features. This is often what is called a "relaxed layered architecture", where
+                layers are allowed to skip around their adjacent neighbour(s). Now, there are situations where this is intended, perhaps
+                if you're trying to follow the CQRS pattern, for example. But, in many cases, bypassing the "business logic" layer is
+                undesirable, especially if that business logic is responsible for ensuring authorised access to individual records, for example.
+            </p>
+
+            <p>
+                While the new feature works, it's perhaps not implemented in the way that we were expecting. I see this happen a lot with
+                teams that I visit as a consultant, and it's usually revealed when teams start to visualise what their codebase really looks like,
+                often for the first time. What we need here is a guideline, an architectural principle, that says something like,
+                "web controllers should never access repositories directly". The question, of course, is enforcement. Many teams I've met simply
+                say, "we enforce this principle through good discipline and code reviews, because we trust our developers". This is great to hear,
+                but we all know what happens when budgets and deadlines start looming ever closer. A far smaller number of teams tell me that
+                they use static analysis tools (e.g. NDepend, Structure101/Sonar, Checkstyle, ArchUnit, etc) to check and automatically enforce
+                architecture violations at build time. You may have seen such rules yourself; they usually manifest themselves as regular
+                expressions or wildcard strings that state "types in package <code>**/web</code> should not access types in <code>**/data</code>"
+                and they are executed after the compilation step. This is a little crude, but it can do the trick, reporting violations of the
+                architecture principles that you've defined as a team and hopefully failing the build. Spring Modulith takes a similar approach,
+                with automatic tests that fail if you break the module definitions.
+            </p>
+            
+            <p>
+                The problem with such approaches is that they are fallible, and the feedback loop is longer than it should be. If left unchecked,
+                this is what can turn a codebase into a "big ball of mud". I'd personally like to use the compiler to enforce my architecture
+                if at all possible.
+            </p>
+
+            <p>
+                This brings me on to what I refer to as "package by component". It's a hybrid approach to everything we've seen so far,
+                with the goal of bundling all of the responsibilities related to a single coarse-grained component into a single Java package.
+                It's about taking a service-centric view of a software system, which is something we're seeing with microservice architectures too.
+                In the same way that ports and adapters treats the web as just another delivery mechanism, I also keep the user interface separate
+                from these coarse-grained components. Here's what the "view orders" feature might look like.
+            </p>
+
+            <p class="centered">
+                <a href="package-by-component-1.png"><img src="package-by-component-1.png" class="img-thumbnail" style="max-height: 90vh;"/></a>
+            </p>
+
+            <p>
+                In essence, this bundles up the "business logic" and persistence code into a single thing, which I'm calling a "component" - a
+                grouping of related functionality behind a well-defined interface, which resides inside an execution environment (i.e. an application).
+                This definition comes from the <a href="https://c4model.com" target="_blank">C4 model</a>.
+            </p>
+
+            <p>
+                A key benefit of the "package by component" approach is that if you're writing code that needs to do something with orders,
+                there's once place to go - the <code>OrdersComponent</code>. Inside the component is still a separation of concerns, so the
+                "business logic" is separate from data persistence, but that's a component implementation detail that consumers don't need to
+                know about. This is akin to what you might end up with if you adopted a microservices or Service-Oriented Architecture - a separate
+                <code>OrdersService</code> that encapsulates everything related to handling orders. The key difference is the "decoupling mode".
+                You can think of well-defined components in a monolithic application as being a stepping stone to a microservices architecture.
+            </p>
+
+            <br />
+
+            <h3>The devil is in the implementation details</h3>
+            <p>
+                On the face of it, the four approaches do all look like different ways to organise code and, therefore, could be considered to
+                be different architectural styles. This starts to unravel very quickly if you get the implementation details wrong though.
+            </p>
+
+            <p>
+                Something I see on a regular basis is an over liberal use of the <code>public</code> access modifier in languages like Java.
+                It's almost as if we, as developers, instinctively use the <code>public</code> keyword without thinking. It's in our muscle memory.
+                If you don't believe me, take a look at the code samples for books, tutorials and open source frameworks on GitHub. This tends to
+                be true regardless of which architectural style a codebase is aiming to adopt; horizontal layers, vertical layers, ports and adapters,
+                etc. Marking all of your types as <code>public</code> means you're not taking advantage of the facilities that your programming
+                language provides with regards to encapsulation. In some cases there's literally nothing preventing somebody writing some code to
+                instantiate a concrete implementation class directly, violating the intended architecture style.
+            </p>
+
+            <br />
+
+            <h3>Organisation vs encapsulation</h3>
+            <p>
+                Looking at this another way, if you make all types in your Java application <code>public</code>, the packages are simply an
+                organisation mechanism (a grouping, like folders) rather than being used for encapsulation. Since public types can be used
+                from anywhere in a codebase, you can effectively ignore the packages because they provide very little real value. The net
+                result is that if you ignore the packages (because they don't provide any means of encapsulation and hiding), it doesn't
+                really matter what sort of architectural style you're aspiring to create. If we look back at the example UML diagrams, the
+                Java packages become an irrelevant detail if all of the types are marked as public. In essence, all four architectural approached
+                presented before are exactly the same.
+            </p>
+
+            <p class="centered">
+                <a href="no-packages.png"><img src="no-packages.png" class="img-thumbnail" style="max-height: 90vh;"/></a>
+            </p>
+
+            <p>
+                Take a close look at the arrows between each of the types, they're all identical regardless of which architectural approach
+                you're trying to adopt. Conceptually the approaches are very different, but syntactically they are identical. Furthermore,
+                you could argue that when you make all of the types <code>public</code>, what you really have are just four ways to describe
+                a traditional horizontally layered architecture. This is a neat trick, and of course nobody would ever make all of their
+                Java types public. Except when they do. And I've seen it.
+            </p>
+
+            <p>
+                The access modifiers in Java are not perfect, but ignoring them is just asking for trouble. The way Java types are placed into
+                packages can actually make a huge difference to how accessible (or inaccessible) those types can be when Java's access modifiers
+                are applied appropriately. If I bring the packages back and mark (by graphically fading) those types where the access modifier
+                can be made more restrictive, the picture becomes pretty interesting.
+            </p>
+
+            <p class="centered">
+                <a href="packages.png"><img src="packages.png" class="img-thumbnail" style="max-height: 90vh;"/></a>
+            </p>
+
+            <p>
+                From left to right. In the "package by layer" approach, the <code>OrdersService</code> and <code>OrdersRepository</code> interfaces
+                need to be public, because they have inbound dependencies from classes outside of their defining package. But the implementation
+                classes (<code>OrdersServiceImpl</code> and <code>JdbcOrdersRepository</code>) can be made more restrictive (package protected).
+                Nobody needs to know about these; they are an implementation detail.
+            </p>
+
+            <p>
+                In the "package by feature" approach, the <code>OrdersController</code> provides the sole entry point into the package, so
+                everything else can be made package protected. The big caveat here is that nothing else in the codebase, outside of this package,
+                can access information related to orders unless they go through the controller. This may or may not be desirable.
+            </p>
+
+            <p>
+                In the ports and adapters approach, the <code>OrdersService</code> and <code>Orders</code> interfaces have inbound dependencies
+                from other packages, so they need to be made public. Again, the implementation classes can be made package protected and
+                dependency injected at runtime.
+            </p>
+
+            <p>
+                Finally, in the "package by component" approach, the <code>OrdersComponent</code> interface has an inbound dependency from the
+                controller, but everything else can be made package protected. The fewer public types you have, the fewer the number of
+                potential dependencies. There's now no way that code outside of this package can use the <code>OrdersRepository</code> interface or
+                implementation directly, so we can rely on the compiler to enforce this architectural principle. You can do the same thing in
+                C# with the <code>internal</code> keyword, although you would need to create a separate assembly for every component, which has some build-time
+                performance and complexity implications.
+            </p>
+
+            <p>
+                Just to be absolutely clear, what I've described here relates to a monolithic application (a "modular monolith"), where all of the
+                code resides in a single source code tree. If you are building such an application, and many people are, I would certainly
+                encourage you to lean on the compiler to enforce your architectural principles, rather than discipline, post-compilation tooling,
+                and automated fitness functions (e.g. ArchUnit).
+            </p>
+
+            <h3>Other decoupling modes</h3>
+            <p>
+                I should also mention that, in addition to the programming language you're using, there are often other ways that you can decouple
+                your source code dependencies. With Java you have module frameworks like OSGi and the Java Platform Module System. With module systems,
+                when used properly, you can make a distinction between types that are <i>public</i> and types that are <i>published</i>. For example,
+                you could create an <code>Orders</code> module where all of the types are marked as public, but only publish a small subset of
+                those types for external consumption.
+            </p>
+
+            <p>
+                Another option is to decouple your dependencies at the source code level, by splitting code across different source code trees.
+                If we take the ports and adapters example, we could have three source code trees as follows.
+            </p>
+
+            <ol>
+                <li>The source code for the business and domain (i.e. everything that is independent of technology and framework choices): <code>OrdersService</code>, <code>OrdersServiceImpl</code> and <code>Orders</code>.</li>
+                <li>The source code for the web: <code>OrdersController</code>.</li>
+                <li>The source code for the data persistence: <code>JdbcOrdersRepository</code>.</li>
+            </ol>
+
+            <p>
+                The latter two source code trees have a compile time dependency on the business and domain code, which itself doesn't know anything
+                about the web or the data persistence code. From an implementation perspective, you can do this by configuring separate modules or
+                projects in your build tool (e.g. Maven, Gradle, MSBuild, etc). Ideally you would repeat this pattern, having a separate source code
+                tree for each and every component in your application. Please note this is very much an idealistic solution, because there are
+                real-world performance, complexity, and maintenance issues associated with breaking your source code up in this way.
+            </p>
+
+            <p>
+                A simpler approach that I see people following for their ports and adapters code is to have just two source code trees as follows.
+            </p>
+
+            <ol>
+                <li>Domain code (the "inside").</li>
+                <li>Infrastructure code (the "outside").</li>
+            </ol>
+
+            <p>
+                This maps on nicely to the diagram that many people use to summarise the ports and adapters architecture, and there is a compile-time dependency from the infrastructure to the domain.
+            </p>
+
+            <p class="centered">
+                <a href="domain-infrastructure.png"><img src="domain-infrastructure.png" class="img-thumbnail" style="max-height: 60vh;"/></a>
+            </p>
+
+            <p>
+                This approach to organising source code will also work, but do be aware of the potential trade-off. It's what I call the
+                "Périphérique anti-pattern of ports and adapters". The city of Paris in France has a ring road called the Boulevard Périphérique,
+                which allows you to circumnavigate Paris without entering the complexities of the city. Having all of your infrastructure code in a
+                single source code tree means that it's potentially possible for infrastructure code in one area of your application (e.g. a web controller)
+                to directly call code in another area of your application (e.g. a database repository), without navigating through the domain. This is
+                especially true if you've forgotten to apply appropriate access modifiers to that code.
+            </p>
+
+            <h3>Summary</h3>
+            <p>
+                Your best design intentions can be destroyed in a flash if you don't consider the intricacies of the implementation strategy.
+                Think about how to map your desired design on to code, how to organise that code, and the various decoupling modes
+                that apply at runtime and compile-time. Consider using your compiler to help you enforce your chosen architectural style, and
+                watch out for coupling in other areas such as data models/stores too.
+            </p>
+        </div>
+    </div>
+
+</body>
+
+<script src="../js/simonbrown.js"></script>
+
+</html>
