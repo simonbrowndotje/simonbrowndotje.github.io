@@ -37,13 +37,13 @@ const ads = [
     },
     {
         img: 'sa4d-workshop.png',
-        href: 'https://simonbrown.je/#workshops',
+        href: 'https://simonbrown.je/workshops',
         expiry: new Date('2026-12-31'),
         targets: [ 'structurizr', 'c4model', 'simonbrown' ]
     },
     {
         img: 'c4-workshop.png',
-        href: 'https://simonbrown.je/#workshops',
+        href: 'https://simonbrown.je/workshops',
         expiry: new Date('2026-12-31'),
         targets: [ 'structurizr', 'c4model', 'simonbrown' ]
     }
