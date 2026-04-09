@@ -2,7 +2,7 @@ body {
     font-family: Tahoma, sans-serif;
     padding: 0;
     margin: 0;
-    font-size: 20px;
+    font-size: 18px;
 }
 .centered {
     text-align: center;
@@ -37,7 +37,7 @@ h3 {
 }
 h4 {
     font-size: 20px;
-    font-weight: bold;
+    font-weight: normal;
 }
 h5 {
     font-size: 16px;
@@ -98,4 +98,7 @@ a:hover {
 }
 .eventMetadata {
     font-size: 80%;
+}
+.talkAbstract {
+    font-size: 12px;
 }
